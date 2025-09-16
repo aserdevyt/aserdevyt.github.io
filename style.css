@@ -1,0 +1,76 @@
+		body {
+			font-family: 'Montserrat', sans-serif;
+			background: linear-gradient(135deg, #1e293b 0%, #64748b 100%);
+			color: #fff;
+			margin: 0;
+			min-height: 100vh;
+		}
+		.container {
+			max-width: 800px;
+			margin: 60px auto;
+			background: rgba(30,41,59,0.85);
+			border-radius: 18px;
+			box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+			padding: 40px 32px;
+		}
+		h1 {
+			font-size: 2.8rem;
+			font-weight: 700;
+			margin-bottom: 0.5em;
+			letter-spacing: 2px;
+		}
+		.desc {
+			font-size: 1.2rem;
+			margin-bottom: 2em;
+			color: #cbd5e1;
+		}
+		.projects {
+			display: flex;
+			gap: 32px;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.project-card {
+			background: #334155;
+			border-radius: 12px;
+			box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+			padding: 24px 20px;
+			min-width: 220px;
+			flex: 1 1 220px;
+			text-align: center;
+			transition: transform 0.2s;
+		}
+		.project-card:hover {
+			transform: translateY(-6px) scale(1.03);
+			box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+		}
+		.project-card h2 {
+			font-size: 1.3rem;
+			margin-bottom: 0.5em;
+			color: #38bdf8;
+		}
+		.project-card p {
+			font-size: 1rem;
+			color: #e0e7ef;
+			margin-bottom: 1em;
+		}
+		.project-card a {
+			display: inline-block;
+			padding: 8px 18px;
+			background: #38bdf8;
+			color: #1e293b;
+			border-radius: 6px;
+			text-decoration: none;
+			font-weight: 700;
+			transition: background 0.2s;
+		}
+		.project-card a:hover {
+			background: #0ea5e9;
+			color: #fff;
+		}
+		footer {
+			text-align: center;
+			margin-top: 40px;
+			color: #cbd5e1;
+			font-size: 0.95em;
+		}

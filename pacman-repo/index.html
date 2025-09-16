@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Aserdev Pacman Repo</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../style.css">
+	<style>
+		body {
+			font-family: 'Montserrat', sans-serif;
+			background: linear-gradient(135deg, #0f172a 0%, #38bdf8 100%);
+			color: #fff;
+			margin: 0;
+			min-height: 100vh;
+		}
+		.container {
+			max-width: 700px;
+			margin: 60px auto;
+			background: rgba(15,23,42,0.92);
+			border-radius: 18px;
+			box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+			padding: 40px 32px;
+		}
+		h1 {
+			font-size: 2.3rem;
+			font-weight: 700;
+			margin-bottom: 0.5em;
+			letter-spacing: 2px;
+			color: #38bdf8;
+		}
+		.desc {
+			font-size: 1.1rem;
+			margin-bottom: 2em;
+			color: #cbd5e1;
+		}
+		.code-area {
+			background: #1e293b;
+			border-radius: 10px;
+			padding: 18px 16px;
+			margin-bottom: 1.5em;
+			position: relative;
+			font-size: 1.05em;
+			color: #e0e7ef;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+		}
+		.copy-btn {
+			position: absolute;
+			top: 12px;
+			right: 12px;
+			background: #38bdf8;
+			color: #0f172a;
+			border: none;
+			border-radius: 6px;
+			padding: 6px 14px;
+			font-weight: 700;
+			cursor: pointer;
+			transition: background 0.2s;
+		}
+		.copy-btn:hover {
+			background: #0ea5e9;
+			color: #fff;
+		}
+		footer {
+			text-align: center;
+			margin-top: 40px;
+			color: #cbd5e1;
+			font-size: 0.95em;
+		}
+	</style>
+</head>
+<body>
+		<div class="container">
+			<div style="text-align:center; margin-bottom:24px;">
+				<a href="/index.html" style="display:inline-block; padding:10px 24px; background:#38bdf8; color:#1e293b; border-radius:8px; font-weight:700; text-decoration:none; font-size:1em; margin-right:12px; transition:background 0.2s;">Home</a>
+				<a href="https://github.com/aserdevyt/" target="_blank" style="display:inline-block; padding:10px 24px; background:#38bdf8; color:#1e293b; border-radius:8px; font-weight:700; text-decoration:none; font-size:1em; transition:background 0.2s;">GitHub</a>
+			</div>
+		<h1>Aserdev Pacman Repo</h1>
+		<div class="desc">
+			Add my custom Arch Linux repository to your system and get access to exclusive packages.<br>
+			<b>Easy setup, always up-to-date!</b>
+		</div>
+		<div class="code-area">
+			<code id="repo-code">bash <(curl -fsSL https://raw.githubusercontent.com/aserdevyt/aserdev-repo/refs/heads/main/install.sh)
+</code>
+			<button class="copy-btn" onclick="copyCode('repo-code')">Copy</button>
+		</div>
+		<div class="desc">
+			run this command <br>
+			Then update and install packages:
+		</div>
+		<div class="code-area">
+			<code id="update-code">sudo pacman -Syu</code>
+			<button class="copy-btn" onclick="copyCode('update-code')">Copy</button>
+		</div>
+		<div class="code-area">
+			<code id="install-code">sudo pacman -S &lt;package-name&gt;</code>
+			<button class="copy-btn" onclick="copyCode('install-code')">Copy</button>
+		</div>
+	</div>
+	<footer>
+		&copy; 2025 Aserdev Pacman Repo
+	</footer>
+	<script>
+		function copyCode(id) {
+			const code = document.getElementById(id).innerText;
+			navigator.clipboard.writeText(code);
+		}
+	</script>
+</body>
+</html>

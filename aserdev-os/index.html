@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Aserdev OS Distro</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../style.css">
+	<style>
+		body {
+			font-family: 'Montserrat', sans-serif;
+			background: linear-gradient(135deg, #334155 0%, #38bdf8 100%);
+			color: #fff;
+			margin: 0;
+			min-height: 100vh;
+		}
+		.container {
+			max-width: 800px;
+			margin: 60px auto;
+			background: rgba(51,65,85,0.92);
+			border-radius: 18px;
+			box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+			padding: 40px 32px;
+		}
+		h1 {
+			font-size: 2.3rem;
+			font-weight: 700;
+			margin-bottom: 0.5em;
+			letter-spacing: 2px;
+			color: #38bdf8;
+		}
+		.desc {
+			font-size: 1.1rem;
+			margin-bottom: 2em;
+			color: #cbd5e1;
+		}
+		.images {
+			display: flex;
+			gap: 24px;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-bottom: 2em;
+		}
+		.img-card {
+			background: #1e293b;
+			border-radius: 10px;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+			padding: 10px;
+			width: 220px;
+			text-align: center;
+		}
+		.img-card img {
+			width: 200px;
+			height: 120px;
+			object-fit: cover;
+			border-radius: 8px;
+			margin-bottom: 8px;
+			background: #64748b;
+		}
+		.img-card span {
+			color: #e0e7ef;
+			font-size: 0.95em;
+		}
+		.code-area {
+			background: #1e293b;
+			border-radius: 10px;
+			padding: 18px 16px;
+			margin-bottom: 1.5em;
+			position: relative;
+			font-size: 1.05em;
+			color: #e0e7ef;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+		}
+		.copy-btn {
+			position: absolute;
+			top: 12px;
+			right: 12px;
+			background: #38bdf8;
+			color: #334155;
+			border: none;
+			border-radius: 6px;
+			padding: 6px 14px;
+			font-weight: 700;
+			cursor: pointer;
+			transition: background 0.2s;
+		}
+		.copy-btn:hover {
+			background: #0ea5e9;
+			color: #fff;
+		}
+		footer {
+			text-align: center;
+			margin-top: 40px;
+			color: #cbd5e1;
+			font-size: 0.95em;
+		}
+	</style>
+</head>
+<body>
+		<div class="container">
+			<div style="text-align:center; margin-bottom:24px;">
+				<a href="/index.html" style="display:inline-block; padding:10px 24px; background:#38bdf8; color:#334155; border-radius:8px; font-weight:700; text-decoration:none; font-size:1em; margin-right:12px; transition:background 0.2s;">Home</a>
+				<a href="https://github.com/aserdevyt/" target="_blank" style="display:inline-block; padding:10px 24px; background:#38bdf8; color:#334155; border-radius:8px; font-weight:700; text-decoration:none; font-size:1em; transition:background 0.2s;">GitHub</a>
+			</div>
+		<h1>Aserdev-OS</h1>
+		<div class="desc">
+			Aserdev-OS is a minimal, fast, and customizable arch-based distribution.<br>
+			Designed for people like me who like a fast and minimal system powered by <a href="https://archlinux.org/">Arch Linux</a></a>.
+		</div>
+		<div class="images">
+			<div class="img-card">
+				<img src="screenshot1.png" alt="Screenshot 1">
+				<span>brokefetch</span>
+			</div>
+			<div class="img-card">
+				<img src="screenshot2.png" alt="Screenshot 2">
+				<span>microsoft-edge</span>
+			</div>
+			<!-- Add more images as needed -->
+		</div>
+		<div class="desc">
+			<b>Install Aserdev-OS with one command, WARNING please review it because it is in an early stage of development:</b>
+		</div>
+		<div class="code-area">
+			<code id="install-cmd">sudo pacman -Sy curl && sh -c "$(curl -fsSL https://raw.githubusercontent.com/aserdevyt/aserdev-os/main/install.sh)"</code>
+			<button class="copy-btn" onclick="copyCode('install-cmd')">Copy</button>
+		</div>
+		<div class="desc">
+			<small><a href="https://github.com/aserdevyt/aserdev-os/blob/main/install.sh" target="_blank">Make sure to review the install script before running it.</a></small>
+		</div>
+	</div>
+	<footer>
+		&copy; 2025 Aserdev OS
+	</footer>
+	<script>
+		function copyCode(id) {
+			const code = document.getElementById(id).innerText;
+			navigator.clipboard.writeText(code);
+		}
+	</script>
+</body>
+</html>

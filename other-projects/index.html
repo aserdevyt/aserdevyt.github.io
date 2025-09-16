@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Aserdev Other Projects</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../style.css">
+	<style>
+		body {
+			font-family: 'Montserrat', sans-serif;
+			background: linear-gradient(135deg, #1e293b 0%, #64748b 100%);
+			color: #fff;
+			margin: 0;
+			min-height: 100vh;
+		}
+		.container {
+			max-width: 700px;
+			margin: 60px auto;
+			background: rgba(30,41,59,0.92);
+			border-radius: 18px;
+			box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+			padding: 40px 32px;
+		}
+		h1 {
+			font-size: 2.3rem;
+			font-weight: 700;
+			margin-bottom: 0.5em;
+			letter-spacing: 2px;
+			color: #38bdf8;
+		}
+		.desc {
+			font-size: 1.1rem;
+			margin-bottom: 2em;
+			color: #cbd5e1;
+		}
+		.projects {
+			display: flex;
+			gap: 32px;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.project-card {
+			background: #334155;
+			border-radius: 12px;
+			box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+			padding: 24px 20px;
+			min-width: 220px;
+			flex: 1 1 220px;
+			text-align: center;
+			transition: transform 0.2s;
+		}
+		.project-card:hover {
+			transform: translateY(-6px) scale(1.03);
+			box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+		}
+		.project-card h2 {
+			font-size: 1.3rem;
+			margin-bottom: 0.5em;
+			color: #38bdf8;
+		}
+		.project-card p {
+			font-size: 1rem;
+			color: #e0e7ef;
+			margin-bottom: 1em;
+		}
+		.project-card a {
+			display: inline-block;
+			padding: 8px 18px;
+			background: #38bdf8;
+			color: #1e293b;
+			border-radius: 6px;
+			text-decoration: none;
+			font-weight: 700;
+			transition: background 0.2s;
+		}
+		.project-card a:hover {
+			background: #0ea5e9;
+			color: #fff;
+		}
+		footer {
+			text-align: center;
+			margin-top: 40px;
+			color: #cbd5e1;
+			font-size: 0.95em;
+		}
+	</style>
+</head>
+<body>
+		<div class="container">
+			<div style="text-align:center; margin-bottom:24px;">
+				<a href="/index.html" style="display:inline-block; padding:10px 24px; background:#38bdf8; color:#1e293b; border-radius:8px; font-weight:700; text-decoration:none; font-size:1em; margin-right:12px; transition:background 0.2s;">Home</a>
+				<a href="https://github.com/aserdevyt/" target="_blank" style="display:inline-block; padding:10px 24px; background:#38bdf8; color:#1e293b; border-radius:8px; font-weight:700; text-decoration:none; font-size:1em; transition:background 0.2s;">GitHub</a>
+			</div>
+		<h1>Other Projects</h1>
+		<div class="desc">
+			Explore more open-source tools and scripts.
+		</div>
+		<div class="projects">
+			<div class="project-card">
+				<h2>brokefetch</h2>
+				<p>A minimal system info fetch tool for broke people made by Szerwigi1410.</p>
+				<a href="https://github.com/Szerwigi1410/brokefetch" target="_blank">GitHub Repo</a>
+			</div>
+			<div class="project-card">
+				<h2>ash-shell</h2>
+				<p>A simple, fast, and scriptable shell written in C.</p>
+				<a href="https://github.com/aserdevyt/ash-shell" target="_blank">GitHub Repo</a>
+			</div>
+		</div>
+	</div>
+	<footer>
+		&copy; 2025 Aserdev Other Projects
+	</footer>
+</body>
+</html>
