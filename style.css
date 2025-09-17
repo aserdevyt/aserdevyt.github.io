@@ -38,6 +38,29 @@
 			body.light footer {
 				color: #64748b;
 			}
+				.footer-buttons {
+					display: flex;
+					gap: 12px;
+					justify-content: center;
+					margin-top: 12px;
+				}
+				.footer-button {
+					display: inline-block;
+					padding: 8px 14px;
+					background: transparent;
+					color: inherit;
+					border: 1px solid rgba(255,255,255,0.08);
+					border-radius: 8px;
+					text-decoration: none;
+					font-weight: 700;
+					transition: background 0.15s, color 0.15s, border-color 0.15s;
+				}
+				:where(body.light) .footer-button {
+					border-color: rgba(0,0,0,0.08);
+				}
+				.footer-button:hover {
+					background: rgba(255,255,255,0.06);
+				}
 		.container {
 			max-width: 800px;
 			margin: 60px auto;
