@@ -1,10 +1,43 @@
-		body {
-			font-family: 'Montserrat', sans-serif;
-			background: linear-gradient(135deg, #1e293b 0%, #64748b 100%);
-			color: #fff;
-			margin: 0;
-			min-height: 100vh;
-		}
+			body {
+				font-family: 'Montserrat', sans-serif;
+				background: linear-gradient(135deg, #1e293b 0%, #64748b 100%);
+				color: #fff;
+				margin: 0;
+				min-height: 100vh;
+			}
+			body.light {
+				background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+				color: #222;
+			}
+			body.light .container {
+				background: #fff;
+				color: #222;
+			}
+			body.light .desc,
+			body.light .project-card p,
+			body.light .project-card h2,
+			body.light .project-card a,
+			body.light footer {
+				color: #222 !important;
+			}
+			body.light .project-card {
+				background: #e0e7ef;
+				color: #222;
+			}
+			body.light .project-card h2 {
+				color: #0ea5e9;
+			}
+			body.light .project-card a {
+				background: #0ea5e9;
+				color: #fff;
+			}
+			body.light .project-card a:hover {
+				background: #38bdf8;
+				color: #222;
+			}
+			body.light footer {
+				color: #64748b;
+			}
 		.container {
 			max-width: 800px;
 			margin: 60px auto;

@@ -4,41 +4,127 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Welcome to Aserdev</title>
+	<meta name="description" content="Aserdev's open-source projects: Aserdev-OS, Pacman Repo, Bash & C tools. Linux, Arch, and more!">
+	<meta name="keywords" content="Aserdev, Linux, Arch, open-source, Bash, C, Pacman, OS, projects">
+	<meta name="author" content="Aserdev">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 	<style>
-
+		.theme-toggle {
+			position: fixed;
+			top: 18px;
+			right: 18px;
+			z-index: 100;
+			background: #38bdf8;
+			color: #1e293b;
+			border: none;
+			border-radius: 8px;
+			padding: 8px 18px;
+			font-weight: 700;
+			cursor: pointer;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+			transition: background 0.2s, color 0.2s;
+		}
+		.theme-toggle:hover {
+			background: #0ea5e9;
+			color: #fff;
+		}
+			body.light {
+				background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+				color: #222;
+			}
+			body.light .container {
+				background: #fff;
+				color: #222;
+			}
+			body.light .desc,
+			body.light .project-card p,
+			body.light .project-card h2,
+			body.light .project-card a,
+			body.light footer {
+				color: #222 !important;
+			}
+			body.light .project-card {
+				background: #e0e7ef;
+				color: #222;
+			}
+			body.light .project-card h2 {
+				color: #0ea5e9;
+			}
+			body.light .project-card a {
+				background: #0ea5e9;
+				color: #fff;
+			}
+			body.light .project-card a:hover {
+				background: #38bdf8;
+				color: #222;
+			}
+			body.light footer {
+				color: #64748b;
+			}
+	</style>
+	<style>
+		@media (max-width: 600px) {
+			.container { padding: 16px 6px; }
+			.projects { flex-direction: column; gap: 18px; }
+			.project-card { min-width: unset; }
+		}
 	</style>
 </head>
 <body>
+	<button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
 	<div class="container">
 		<h1>Hi, I'm Aserdev!</h1>
 		<div class="desc">
-			Linux enthusiast, arch user, open-source developer, and creator of cool tools in C and Bash.<br>
-			Explore my projects below:
+			Linux enthusiast, Arch user, open-source developer, and creator of cool tools in C and Bash.<br>
+			I love building minimal, fast, and useful software for the Linux community.<br>
+			Explore my featured projects below:
 		</div>
 		<div class="projects">
 			<div class="project-card">
 				<h2>Aserdev-OS</h2>
-				<p>An arch-based, fast, and customizable Linux-distro  project.</p>
+				<p>A fast, minimal, and customizable Arch-based Linux distribution. <br> <b>Features:</b> Lightweight, easy install, and great for tinkerers.</p>
 				<a href="aserdev-os/index.html">Learn More</a>
 			</div>
 			<div class="project-card">
 				<h2>Pacman Repo</h2>
-				<p>My custom pacman-repo repository for Arch Linux users.</p>
+				<p>My custom repository for Arch Linux users. <br> <b>Features:</b> Exclusive packages, easy setup, always up-to-date.</p>
 				<a href="pacman-repo/index.html">View Repo</a>
 			</div>
 			<div class="project-card">
 				<h2>Other Projects</h2>
-				<p>Discover more Bash and C tools me and my friend have built.</p>
+				<p>Discover more Bash and C tools built by me and friends. <br> <b>Featured:</b> brokefetch, ash-shell, and more.</p>
 				<a href="other-projects/index.html">See More</a>
 			</div>
 				<div style="text-align:center; margin-top:32px;">
 					<a href="https://github.com/aserdevyt/" target="_blank" style="display:inline-block; padding:12px 28px; background:#38bdf8; color:#1e293b; border-radius:8px; font-weight:700; text-decoration:none; font-size:1.15em; transition:background 0.2s;">Visit My GitHub</a>
 				</div>
+				<hr style="margin:32px 0; border: none; border-top: 1px solid #64748b;">
+				<div style="text-align:center;">
+					<h2>About Me</h2>
+					<p style="color:#cbd5e1; font-size:1.1em;">I'm Aserdev, a passionate Linux user and open-source developer. I enjoy building tools that make life easier for other Linux fans. If you want to collaborate or have questions, feel free to reach out!</p>
+					<h2>Contact</h2>
+					<p style="color:#cbd5e1; font-size:1.1em;">Email: <a href="mailto:aserdevyt@gmail.com" style="color:#38bdf8;">aserdevyt@gmail.com</a></p>
+				</div>
 			</div>
 			<footer>
 				&copy; 2025 Aserdev. All rights reserved.
 			</footer>
+		<script>
+			function toggleTheme() {
+				document.body.classList.toggle('light');
+				localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+			}
+				function setThemeFromPreference() {
+					const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+					if(localStorage.getItem('theme')) {
+						document.body.classList.toggle('light', localStorage.getItem('theme') === 'light');
+					} else {
+						document.body.classList.toggle('light', prefersLight);
+					}
+				}
+				window.onload = setThemeFromPreference;
+				window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', setThemeFromPreference);
+		</script>
 		</body>
 		</html>

@@ -1,6 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<style>
+	.theme-toggle {
+		position: fixed;
+		top: 18px;
+		right: 18px;
+		z-index: 100;
+		background: #38bdf8;
+		color: #1e293b;
+		border: none;
+		border-radius: 8px;
+		padding: 8px 18px;
+		font-weight: 700;
+		cursor: pointer;
+		box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+		transition: background 0.2s, color 0.2s;
+	}
+	.theme-toggle:hover {
+		background: #0ea5e9;
+		color: #fff;
+	}
+		body.light {
+			background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+			color: #222;
+		}
+		body.light .container {
+			background: #fff;
+			color: #222;
+		}
+		body.light .desc,
+		body.light .code-area,
+		body.light h1,
+		body.light .copy-btn,
+		body.light footer {
+			color: #222 !important;
+		}
+		body.light .code-area {
+			background: #e0e7ef;
+			color: #222;
+		}
+		body.light .copy-btn {
+			background: #0ea5e9;
+			color: #fff;
+		}
+		body.light .copy-btn:hover {
+			background: #38bdf8;
+			color: #222;
+		}
+		body.light h1 {
+			color: #0ea5e9;
+		}
+		body.light footer {
+			color: #64748b;
+		}
+</style>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Aserdev Pacman Repo</title>
@@ -70,6 +124,7 @@
 	</style>
 </head>
 <body>
+	<button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
 		<div class="container">
 			<div style="text-align:center; margin-bottom:24px;">
 				<a href="/index.html" style="display:inline-block; padding:10px 24px; background:#38bdf8; color:#1e293b; border-radius:8px; font-weight:700; text-decoration:none; font-size:1em; margin-right:12px; transition:background 0.2s;">Home</a>
@@ -102,6 +157,20 @@
 		&copy; 2025 Aserdev Pacman Repo
 	</footer>
 	<script>
+	function toggleTheme() {
+		document.body.classList.toggle('light');
+		localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+	}
+		function setThemeFromPreference() {
+			const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+			if(localStorage.getItem('theme')) {
+				document.body.classList.toggle('light', localStorage.getItem('theme') === 'light');
+			} else {
+				document.body.classList.toggle('light', prefersLight);
+			}
+		}
+		window.onload = setThemeFromPreference;
+		window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', setThemeFromPreference);
 		function copyCode(id) {
 			const code = document.getElementById(id).innerText;
 			navigator.clipboard.writeText(code);
