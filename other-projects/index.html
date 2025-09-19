@@ -167,11 +167,18 @@
 		</div>
 	</div>
 	<footer>
-<script>
-	function toggleTheme() {
-		document.body.classList.toggle('light');
-		localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
-	}
+		&copy; 2025 Aserdev Other Projects
+		<div class="footer-buttons">
+			<a class="footer-button" href="/LICENSE" target="_blank">License</a>
+			<a class="footer-button" href="https://github.com/aserdevyt/aserdevyt.github.io/tree/main" target="_blank">Source Code</a>
+			<a class="footer-button" href="/about.html">About</a>
+		</div>
+	</footer>
+	<script>
+		function toggleTheme() {
+			document.body.classList.toggle('light');
+			localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+		}
 		function setThemeFromPreference() {
 			const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
 			if(localStorage.getItem('theme')) {
@@ -182,12 +189,4 @@
 		}
 		window.onload = setThemeFromPreference;
 		window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', setThemeFromPreference);
-</script>
-		&copy; 2025 Aserdev Other Projects
-	<footer>
-		&copy; 2025 Aserdev Other Projects
-		<div class="footer-buttons">
-			<a class="footer-button" href="/LICENSE" target="_blank">License</a>
-			<a class="footer-button" href="https://github.com/aserdevyt/aserdevyt.github.io/tree/main" target="_blank">Source Code</a>
-		</div>
-	</footer>
+	</script>
