@@ -6,24 +6,46 @@
   <title>brokefetch — Details</title>
   <link rel="stylesheet" href="../style.css">
   <style>
-    /* Reuse main site styles by using the same container class */
     .container { max-width:900px; margin:48px auto; padding:28px; border-radius:12px; background:rgba(30,41,59,0.85); }
     h1 { color:#38bdf8; margin-top:0 }
     a.button { display:inline-block; padding:8px 14px; background:#38bdf8; color:#07203a; border-radius:8px; text-decoration:none; font-weight:700 }
-  .grid { display:flex; gap:28px; flex-wrap:wrap; align-items:center; justify-content:center }
-  .os { width:200px; text-align:center }
-  .os img { width:180px; height:auto; border-radius:12px; background:rgba(255,255,255,0.02); padding:10px; display:block; margin:0 auto 10px }
+    .grid { display:flex; gap:28px; flex-wrap:wrap; align-items:center; justify-content:center }
+    .os { width:200px; text-align:center }
+    .os img { width:180px; height:auto; border-radius:12px; background:rgba(255,255,255,0.02); padding:10px; display:block; margin:0 auto 10px }
     .code { background:#0b1220; color:#dbeafe; padding:12px; border-radius:8px; font-family: monospace; white-space: pre; overflow:auto }
     .cmd-row { display:flex; gap:8px; align-items:center; margin-bottom:18px }
     .copy { margin-left:8px; padding:8px 12px; border-radius:8px; cursor:pointer; background:#0ea5e9; color:#012027; border:none; font-weight:700 }
     .copy:active { transform:translateY(1px) }
+    .badges { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px }
+    .badges img { vertical-align: middle; }
   </style>
 </head>
 <body>
   <div class="container">
     <a href="index.html" class="button">← Back</a>
     <h1>brokefetch</h1>
-    <p>Made by <a href="https://github.com/Szerwigi1410" target="_blank">Szerwigi1410</a>.<a href="https://github.com/Szerwigi1410/brokefetch" target="_blank">source code</a></p>
+    <p>Made by <a href="https://github.com/Szerwigi1410" target="_blank">Szerwigi1410</a>. 
+       <a href="https://github.com/Szerwigi1410/brokefetch" target="_blank">Source code</a></p>
+
+    <!-- GitHub Badges -->
+    <div class="badges">
+      <a href="https://github.com/Szerwigi1410/brokefetch" target="_blank">
+        <img src="https://img.shields.io/github/stars/Szerwigi1410/brokefetch?style=for-the-badge" alt="GitHub stars">
+      </a>
+      <a href="https://github.com/Szerwigi1410/brokefetch/forks" target="_blank">
+        <img src="https://img.shields.io/github/forks/Szerwigi1410/brokefetch?style=for-the-badge" alt="GitHub forks">
+      </a>
+      <a href="https://github.com/Szerwigi1410/brokefetch/issues" target="_blank">
+        <img src="https://img.shields.io/github/issues/Szerwigi1410/brokefetch?style=for-the-badge" alt="Open issues">
+      </a>
+      <!-- GitHub Top Language Badge -->
+<a href="https://github.com/Szerwigi1410/brokefetch" target="_blank">
+  <img src="https://img.shields.io/github/languages/top/Szerwigi1410/brokefetch" alt="GitHub top language">
+</a>
+
+<!-- Static Made With Badge -->
+<img src="https://img.shields.io/badge/made_with-vscode%2C_nano%2C_Xcode%2C_helix-blue" alt="Made with VSCode, nano, Xcode, helix">
+    </div>
 
     <h2>Install Options</h2>
     <h3>Option 1 — Script</h3>
@@ -35,17 +57,18 @@
 
     <h2>Screenshots / Logos</h2>
     <div class="grid">
-  <div class="os"><img src="images/windows.png" alt="Windows" height="600" width="600"><div>Windows</div></div>
-  <div class="os"><img src="images/arch.png" alt="Arch" height="600" width="600"><div>Arch</div></div>
-  <div class="os"><img src="images/aserdev.png" alt="Aserdev" height="600" width="600"><div>Aserdev</div></div>
-  <div class="os"><img src="images/debian.png" alt="Debian" height="600" width="600"><div>Debian</div></div>
+      <div class="os"><img src="images/windows.png" alt="Windows"><div>Windows</div></div>
+      <div class="os"><img src="images/arch.png" alt="Arch"><div>Arch</div></div>
+      <div class="os"><img src="images/aserdev.png" alt="Aserdev"><div>Aserdev</div></div>
+      <div class="os"><img src="images/debian.png" alt="Debian"><div>Debian</div></div>
     </div>
+
     <footer style="margin-top:28px; padding-top:18px; border-top:1px solid rgba(255,255,255,0.04); display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap">
       <div style="color:#cbd5e1">&copy; 2025 Aserdev</div>
       <div class="footer-buttons" style="display:flex; gap:12px;">
-  <a class="footer-button" href="/LICENSE" target="_blank">License</a>
-  <a class="footer-button" href="https://github.com/Szerwigi1410/brokefetch" target="_blank">Source Code</a>
-  <a class="footer-button" href="/about.html">About</a>
+        <a class="footer-button" href="/LICENSE" target="_blank">License</a>
+        <a class="footer-button" href="https://github.com/Szerwigi1410/brokefetch" target="_blank">Source Code</a>
+        <a class="footer-button" href="/about.html">About</a>
       </div>
     </footer>
   </div>
