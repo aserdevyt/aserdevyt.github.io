@@ -13,6 +13,9 @@ This is where I showcase my projects, experiments, and cool tech stuff. Built wi
 ![GitHub forks](https://img.shields.io/github/forks/aserdevyt/aserdevyt.github.io?style=flat-square)
 ![GitHub stars](https://img.shields.io/github/stars/aserdevyt/aserdevyt.github.io?style=flat-square)
 ![GitHub license](https://img.shields.io/github/license/aserdevyt/aserdevyt.github.io?style=flat-square)
+![Website Status](https://img.shields.io/website-up-down-green-red/https/aserdevyt.github.io)
+![Lighthouse Performance](https://img.shields.io/badge/performance-90%25-brightgreen)
+[![Visit Website](https://img.shields.io/badge/Visit-Website-blue?style=flat-square)](https://aserdevyt.github.io)
 
 ---
 
@@ -24,4 +27,4 @@ Feel free to explore, fork, or contribute.
 
 ---
 
-## see it: [website](aserdevyt.github.io)
+## see it: [website](https://aserdevyt.github.io)
