@@ -130,3 +130,39 @@
 			color: #cbd5e1;
 			font-size: 0.95em;
 		}
+
+/* Global link styles: readable, high-contrast, accessible */
+a {
+	color: #38bdf8; /* primary cyan */
+	text-decoration: none;
+	font-weight: 600;
+	transition: color 0.15s ease, text-decoration 0.15s ease;
+}
+
+a:visited {
+	color: #7dd3fc;
+}
+
+a:hover,
+a:focus {
+	color: #0ea5e9;
+	text-decoration: underline;
+	outline: none;
+}
+
+a:focus {
+	box-shadow: 0 0 0 4px rgba(14,165,233,0.12);
+	border-radius: 6px;
+}
+
+/* Light theme link adjustments */
+body.light a {
+	color: #0ea5e9;
+}
+body.light a:visited {
+	color: #0369a1;
+}
+body.light a:hover,
+body.light a:focus {
+	color: #0369a1;
+}
