@@ -182,16 +182,13 @@
     <h3>Option 1 — pacman</h3>
     <p>install <a href="/pacman-repo/">aserdev-repo</a> and install with pacman</p>
     <div class="cmd-row">
-      <div class="code" id="scriptCmd">bash <(curl -fsSL
-          https://raw.githubusercontent.com/aserdevyt/aserdev-repo/refs/heads/main/install.sh) && sudo pacman -Sy ash-shell</div>
+      <div class="code" id="scriptCmd">bash <(curl -fsSL https://raw.githubusercontent.com/aserdevyt/aserdev-repo/refs/heads/main/install.sh) && sudo pacman -Sy ash-shell</div>
           <button class="copy" onclick="copyText('scriptCmd', this)">Copy</button>
       </div>
       <h3>Option 2 — cmake</h3>
       <p>install cmake and compile in "C"</p>
       <div class="cmd-row">
-        <div class="code" id="cmakeCmd">
-          git clone https://github.com/aserdevyt/ash-shell.git && cd ash-shell && mkdir build && cd build && cmake .. && make && sudo make install
-        </div>
+        <div class="code" id="cmakeCmd">git clone https://github.com/aserdevyt/ash-shell.git && cd ash-shell && mkdir build && cd build && cmake .. && make && sudo make install</div>
         <button class="copy" onclick="copyText('cmakeCmd', this)">Copy</button>
       </div>
 
