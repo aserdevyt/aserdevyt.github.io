@@ -28,7 +28,7 @@
     <h1>text to ascii encoder</h1>
     <p>Made by <a href="https://github.com/Szerwigi1410" target="_blank">Szerwigi1410</a>. 
        <a href="https://github.com/Szerwigi1410/Text-to-ascii-encoder" target="_blank">Source code</a></p>
-
+      <p>this is pefect if you are a low-lvl programmer that needs to turn text into ascii code</p>
     <!-- GitHub Badges -->
     <div class="badges">
       <a href="https://github.com/Szerwigi1410/Text-to-ascii-encoder" target="_blank">
@@ -50,13 +50,21 @@
     </div>
 
     <h2>Install Options</h2>
-    <h3>Option 1 — Script</h3>
-    <p>Download and run the install script:</p>
+    <h3>Option 1 — pacman</h3>
+    <p>install using my pacman repo:</p>
     <div class="cmd-row">
       <div class="code" id="scriptCmd">bash <(curl -fsSL https://raw.githubusercontent.com/aserdevyt/aserdev-repo/refs/heads/main/install.sh) && sudo pacman -Sy ascii-enc</div>
       <button class="copy" onclick="copyText('scriptCmd', this)">Copy</button>
     </div>
+    <h3>Option 2 — script</h3>
 
+    <p>install using this script made by <a href="https://github.com/Szerwigi1410/">Szerwigi1410 </a>:</p>
+    <p>use this if you ain't an archlinux-user:</p>
+    <p>review from <a href="https://github.com/Szerwigi1410/Text-to-ascii-encoder/blob/main/install.sh">here</a></p>
+    <div class="cmd-row">
+      <div class="code" id="scriptCmd2">git clone https://github.com/Szerwigi1410/Text-to-ascii-encoder.git && cd Text-to-ascii-encoder && chmod +x install.sh && ./install.sh</div>
+      <button class="copy" onclick="copyText('scriptCmd2', this)">Copy</button>
+    </div>
 
     <footer style="margin-top:28px; padding-top:18px; border-top:1px solid rgba(255,255,255,0.04); display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap">
       <div style="color:#cbd5e1">&copy; 2025 Aserdev</div>

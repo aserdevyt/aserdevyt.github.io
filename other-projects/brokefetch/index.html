@@ -58,13 +58,19 @@
       <li>A CRT monitor</li>
     </ul>
     <h2>Install Options</h2>
-    <h3>Option 1 — Script</h3>
-    <p>Download and run the install script:</p>
+    <h3>Option 1 — pacman</h3>
+    <p>use pacman to install:</p>
     <div class="cmd-row">
-      <div class="code" id="scriptCmd">bash <(curl -fsSL https://raw.githubusercontent.com/aserdevyt/aserdev-repo/refs/heads/main/install.sh) && sudo pacman -Sy brokefetch</div>
+      <div class="code" id="pacmancmd">bash <(curl -fsSL https://raw.githubusercontent.com/aserdevyt/aserdev-repo/refs/heads/main/install.sh) && sudo pacman -Sy brokefetch</div>
+      <button class="copy" onclick="copyText('pacmancmd', this)">Copy</button>
+    </div>
+    <h3>option 2 - Script </h3>
+    <a href="https://github.com/Szerwigi1410/brokefetch/blob/main/install.sh">review the script</a>
+    <p>use this command if you ain't an <a href="https://archlinux.org/">archlinux-user</a> use these commands:⚠️ this is bad idea if you aren't sure ⚠️</p>
+       <div class="cmd-row">
+      <div class="code" id="scriptCmd">curl -sSL https://raw.githubusercontent.com/Szerwigi1410/brokefetch/refs/heads/main/install.sh > install.sh ; chmod +x install.sh ; bash -c "./install.sh" ; rm -f install.sh</div>
       <button class="copy" onclick="copyText('scriptCmd', this)">Copy</button>
     </div>
-
     <h2>Screenshots / Logos</h2>
     <div class="grid">
       <div class="os"><img src="/other-projects/images/brokefetch/windows.png" alt="Windows"><div>Windows</div></div>
@@ -72,7 +78,7 @@
       <div class="os"><img src="/other-projects/images/brokefetch/aserdev.png" alt="Aserdev"><div>Aserdev</div></div>
       <div class="os"><img src="/other-projects/images/brokefetch/debian.png" alt="Debian"><div>Debian</div></div>
     </div>
-          <p>why choose fastfetch when you are brokefetch -<a href="https://github.com/aserdevyt/">aserdev</a></p>
+    <p>why choose fastfetch when you are brokefetch -<a href="https://github.com/aserdevyt/">aserdev</a></p>
     <footer style="margin-top:28px; padding-top:18px; border-top:1px solid rgba(255,255,255,0.04); display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap">
       <div style="color:#cbd5e1">&copy; 2025 Aserdev</div>
 
