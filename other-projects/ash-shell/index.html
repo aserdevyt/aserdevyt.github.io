@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="/images/logo.jpeg" sizes="32x32">
+  <link rel="shortcut icon" href="/images/logo.jpeg">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ash-shell — Details</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .container {
+      max-width: 900px;
+      margin: 48px auto;
+      padding: 28px;
+      border-radius: 12px;
+      background: rgba(30, 41, 59, 0.85);
+    }
+
+    h1 {
+      color: #38bdf8;
+      margin-top: 0
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 8px 14px;
+      background: #38bdf8;
+      color: #07203a;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700
+    }
+
+    .grid {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center
+    }
+
+    .os {
+      width: 200px;
+      text-align: center
+    }
+
+    .os img {
+      width: 180px;
+      height: auto;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.02);
+      padding: 10px;
+      display: block;
+      margin: 0 auto 10px
+    }
+
+    .code {
+      background: #0b1220;
+      color: #dbeafe;
+      padding: 12px;
+      border-radius: 8px;
+      font-family: monospace;
+      white-space: pre;
+      overflow: auto
+    }
+
+    .cmd-row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 18px
+    }
+
+    .copy {
+      margin-left: 8px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #0ea5e9;
+      color: #012027;
+      border: none;
+      font-weight: 700
+    }
+
+    .copy:active {
+      transform: translateY(1px)
+    }
+
+    .badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 8px
+    }
+
+    .badges img {
+      vertical-align: middle;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <a href="/other-projects/index.html" class="button">← Back</a>
+    <h1>ash-shell</h1>
+    <h3>Lightweight and customizeable shell for Linux made in "C" </h3>
+    <a href="https://github.com/aserdevyt/ash-shell" target="_blank">Source code</a></p>
+
+    <!-- GitHub Badges -->
+    <div class="badges">
+      <a href="https://github.com/aserdevyt/ash-shell" target="_blank">
+        <img src="https://img.shields.io/github/stars/aserdevyt/ash-shell?style=for-the-badge" alt="GitHub stars">
+      </a>
+      <a href="https://github.com/aserdevyt/ash-shell/forks" target="_blank">
+        <img src="https://img.shields.io/github/forks/aserdevyt/ash-shell?style=for-the-badge" alt="GitHub forks">
+      </a>
+      <a href="https://github.com/aserdevyt/ash-shell/issues" target="_blank">
+        <img src="https://img.shields.io/github/issues/aserdevyt/ash-shell?style=for-the-badge" alt="Open issues">
+      </a>
+      <!-- GitHub Top Language Badge -->
+      <a href="https://github.com/aserdevyt/ash-shell" target="_blank">
+        <img src="https://img.shields.io/github/languages/top/aserdevyt/ash-shell" alt="GitHub top language">
+      </a>
+
+    </div>
+
+    <h2>Install Options</h2>
+    <h3>Option 1 — pacman</h3>
+    <p>install <a href="/pacman-repo/">aserdev-repo</a> and install with pacman</p>
+    <div class="cmd-row">
+      <div class="code" id="scriptCmd">bash <(curl -fsSL
+          https://raw.githubusercontent.com/aserdevyt/aserdev-repo/refs/heads/main/install.sh) && sudo pacman -Sy
+          ash-shell</div>
+          <button class="copy" onclick="copyText('scriptCmd', this)">Copy</button>
+      </div>
+      <h3>Option 2 — cmake</h3>
+      <p>install cmake and compile in "C"</p>
+      <div class="cmd-row">
+        <div class="code" id="cmakeCmd">
+          git clone https://github.com/aserdevyt/ash-shell.git && cd ash-shell && mkdir build && cd build && cmake .. &&
+          make && sudo make install
+        </div>
+        <button class="copy" onclick="copyText('cmakeCmd', this)">Copy</button>
+      </div>
+
+      <h2>Screenshots / Logos</h2>
+      <div class="grid">
+        <div class="os"><img src="/other-projects/images/ash-shell/screenshot-1.png" alt="Screenshot-1">
+          <div>Screenshot</div>
+        </div>
+        <div class="os"><img src="/other-projects/images/ash-shell/screenshot-2.png" alt="Screenshot-2">
+          <div>Screenshot</div>
+        </div>
+        <div class="os"><img src="/other-projects/images/ash-shell/screenshot-3.png" alt="Screenshot-3">
+          <div>Screenshot</div>
+        </div>
+      </div>
+
+      <footer
+        style="margin-top:28px; padding-top:18px; border-top:1px solid rgba(255,255,255,0.04); display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap">
+        <div style="color:#cbd5e1">&copy; 2025 Aserdev</div>
+        <div class="footer-buttons" style="display:flex; gap:12px;">
+          <a class="footer-button" href="/LICENSE" target="_blank">License</a>
+          <a class="footer-button" href="https://github.com/aserdevyt/aserdevyt.github.io" target="_blank">Source
+            Code</a>
+          <a class="footer-button" href="/about.html">About</a>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      function copyText(id, btn) {
+        const el = document.getElementById(id);
+        const t = el ? el.textContent : '';
+        if (!t) return;
+        navigator.clipboard.writeText(t).then(() => {
+          const original = btn.innerText;
+          btn.innerText = 'Copied';
+          setTimeout(() => btn.innerText = original, 1500);
+        }).catch(() => { prompt('Copy this:', t); });
+      }
+    </script>
+</body>
+
+</html>
