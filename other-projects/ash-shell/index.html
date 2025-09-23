@@ -97,6 +97,52 @@
     .badges img {
       vertical-align: middle;
     }
+
+    .documentation pre {
+      background-color: #0b1220;
+      color: #dbeafe;
+      padding: 12px;
+      border-radius: 8px;
+      font-family: monospace;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      overflow: auto;
+    }
+
+    /* New styles for better documentation layout */
+    .documentation h2 {
+      border-bottom: 2px solid #38bdf8;
+      padding-bottom: 5px;
+      margin-top: 30px;
+      font-size: 1.5rem;
+    }
+
+    .documentation h3 {
+      font-size: 1.25rem;
+      margin-top: 20px;
+    }
+
+    .documentation p {
+      line-height: 1.6;
+      margin-bottom: 1em;
+    }
+
+    .documentation ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .documentation li {
+      margin-bottom: 10px;
+    }
+    
+    .documentation img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+      margin: 1em auto;
+    }
   </style>
 </head>
 
@@ -108,127 +154,223 @@
     <a href="https://github.com/aserdevyt/ash-shell" target="_blank">Source code</a></p>
 
     <!-- GitHub Badges -->
-<!-- Project Badges -->
-<div class="badges">
-  <!-- AUR -->
-  <a href="https://aur.archlinux.org/packages/ash-shell-git" target="_blank">
-    <img src="https://img.shields.io/aur/version/ash-shell-git?style=for-the-badge" alt="AUR version">
-  </a>
-  <a href="https://aur.archlinux.org/packages/ash-shell-git" target="_blank">
-    <img src="https://img.shields.io/aur/votes/ash-shell-git?style=for-the-badge" alt="AUR votes">
-  </a>
+    <!-- Project Badges -->
+    <div class="badges">
+      <!-- AUR -->
+      <a href="https://aur.archlinux.org/packages/ash-shell-git" target="_blank">
+        <img src="https://img.shields.io/aur/version/ash-shell-git?style=for-the-badge" alt="AUR version">
+      </a>
+      <a href="https://aur.archlinux.org/packages/ash-shell-git" target="_blank">
+        <img src="https://img.shields.io/aur/votes/ash-shell-git?style=for-the-badge" alt="AUR votes">
+      </a>
 
-  <!-- License -->
-  <a href="https://github.com/aserdevyt/ash-shell/blob/main/LICENSE" target="_blank">
-    <img src="https://img.shields.io/github/license/aserdevyt/ash-shell?style=for-the-badge" alt="License">
-  </a>
+      <!-- License -->
+      <a href="https://github.com/aserdevyt/ash-shell/blob/main/LICENSE" target="_blank">
+        <img src="https://img.shields.io/github/license/aserdevyt/ash-shell?style=for-the-badge" alt="License">
+      </a>
 
-  <!-- Languages -->
-  <a href="https://github.com/aserdevyt/ash-shell" target="_blank">
-    <img src="https://img.shields.io/github/languages/top/aserdevyt/ash-shell?style=for-the-badge" alt="Top language">
-  </a>
-  <a href="https://github.com/aserdevyt/ash-shell" target="_blank">
-    <img src="https://img.shields.io/github/languages/count/aserdevyt/ash-shell?style=for-the-badge" alt="Languages count">
-  </a>
+      <!-- Languages -->
+      <a href="https://github.com/aserdevyt/ash-shell" target="_blank">
+        <img src="https://img.shields.io/github/languages/top/aserdevyt/ash-shell?style=for-the-badge" alt="Top language">
+      </a>
+      <a href="https://github.com/aserdevyt/ash-shell" target="_blank">
+        <img src="https://img.shields.io/github/languages/count/aserdevyt/ash-shell?style=for-the-badge" alt="Languages count">
+      </a>
 
-  <!-- Code Stats -->
-  <a href="https://github.com/aserdevyt/ash-shell" target="_blank">
-    <img src="https://img.shields.io/tokei/lines/github/aserdevyt/ash-shell?style=for-the-badge" alt="Lines of code">
-  </a>
-  <a href="https://github.com/aserdevyt/ash-shell" target="_blank">
-    <img src="https://img.shields.io/github/repo-size/aserdevyt/ash-shell?style=for-the-badge" alt="Repo size">
-  </a>
+      <!-- Code Stats -->
+      <a href="https://github.com/aserdevyt/ash-shell" target="_blank">
+        <img src="https://img.shields.io/tokei/lines/github/aserdevyt/ash-shell?style=for-the-badge" alt="Lines of code">
+      </a>
+      <a href="https://github.com/aserdevyt/ash-shell" target="_blank">
+        <img src="https://img.shields.io/github/repo-size/aserdevyt/ash-shell?style=for-the-badge" alt="Repo size">
+      </a>
 
-  <!-- Activity -->
-  <a href="https://github.com/aserdevyt/ash-shell/commits/main" target="_blank">
-    <img src="https://img.shields.io/github/last-commit/aserdevyt/ash-shell?style=for-the-badge" alt="Last commit">
-  </a>
-  <a href="https://github.com/aserdevyt/ash-shell/commits/main" target="_blank">
-    <img src="https://img.shields.io/github/commit-activity/m/aserdevyt/ash-shell?style=for-the-badge" alt="Commit activity">
-  </a>
- 
-  <!-- Contributors -->
-  <a href="https://github.com/aserdevyt/ash-shell/graphs/contributors" target="_blank">
-    <img src="https://img.shields.io/github/contributors/aserdevyt/ash-shell?style=for-the-badge" alt="Contributors">
-  </a>
+      <!-- Activity -->
+      <a href="https://github.com/aserdevyt/ash-shell/commits/main" target="_blank">
+        <img src="https://img.shields.io/github/last-commit/aserdevyt/ash-shell?style=for-the-badge" alt="Last commit">
+      </a>
+      <a href="https://github.com/aserdevyt/ash-shell/commits/main" target="_blank">
+        <img src="https://img.shields.io/github/commit-activity/m/aserdevyt/ash-shell?style=for-the-badge" alt="Commit activity">
+      </a>
 
-  <!-- Issues -->
-  <a href="https://github.com/aserdevyt/ash-shell/issues" target="_blank">
-    <img src="https://img.shields.io/github/issues/aserdevyt/ash-shell?style=for-the-badge" alt="Open issues">
-  </a>
-  <a href="https://github.com/aserdevyt/ash-shell/pulls" target="_blank">
-    <img src="https://img.shields.io/github/issues-pr/aserdevyt/ash-shell?style=for-the-badge" alt="Pull requests">
-  </a>
+      <!-- Contributors -->
+      <a href="https://github.com/aserdevyt/ash-shell/graphs/contributors" target="_blank">
+        <img src="https://img.shields.io/github/contributors/aserdevyt/ash-shell?style=for-the-badge" alt="Contributors">
+      </a>
 
-  <!-- Releases -->
-  <a href="https://github.com/aserdevyt/ash-shell/releases" target="_blank">
-    <img src="https://img.shields.io/github/v/release/aserdevyt/ash-shell?include_prereleases&style=for-the-badge" alt="Releases">
-  </a>
+      <!-- Issues -->
+      <a href="https://github.com/aserdevyt/ash-shell/issues" target="_blank">
+        <img src="https://img.shields.io/github/issues/aserdevyt/ash-shell?style=for-the-badge" alt="Open issues">
+      </a>
+      <a href="https://github.com/aserdevyt/ash-shell/pulls" target="_blank">
+        <img src="https://img.shields.io/github/issues-pr/aserdevyt/ash-shell?style=for-the-badge" alt="Pull requests">
+      </a>
 
-  <!-- Social -->
-  <a href="https://github.com/aserdevyt/ash-shell/stargazers" target="_blank">
-    <img src="https://img.shields.io/github/stars/aserdevyt/ash-shell?style=social" alt="GitHub stars">
-  </a>
-  <a href="https://github.com/aserdevyt/ash-shell/network/members" target="_blank">
-    <img src="https://img.shields.io/github/forks/aserdevyt/ash-shell?style=social" alt="GitHub forks">
-  </a>
-  <a href="https://github.com/aserdevyt/ash-shell/watchers" target="_blank">
-    <img src="https://img.shields.io/github/watchers/aserdevyt/ash-shell?style=social" alt="GitHub watchers">
-  </a>
-</div>
+      <!-- Releases -->
+      <a href="https://github.com/aserdevyt/ash-shell/releases" target="_blank">
+        <img src="https://img.shields.io/github/v/release/aserdevyt/ash-shell?include_prereleases&style=for-the-badge" alt="Releases">
+      </a>
 
+      <!-- Social -->
+      <a href="https://github.com/aserdevyt/ash-shell/stargazers" target="_blank">
+        <img src="https://img.shields.io/github/stars/aserdevyt/ash-shell?style=social" alt="GitHub stars">
+      </a>
+      <a href="https://github.com/aserdevyt/ash-shell/network/members" target="_blank">
+        <img src="https://img.shields.io/github/forks/aserdevyt/ash-shell?style=social" alt="GitHub forks">
+      </a>
+      <a href="https://github.com/aserdevyt/ash-shell/watchers" target="_blank">
+        <img src="https://img.shields.io/github/watchers/aserdevyt/ash-shell?style=social" alt="GitHub watchers">
+      </a>
+    </div>
+
+    <h2>Documentation</h2>
+    <div class="documentation">
+      <p><strong>ash-shell</strong> is a linux shell designed for gnu/linux</p>
+      <h2>⚠️warning:</h2>
+      <p>this shell is full of buggs and in an early stage i don't recomend using it daily untill i make sure that it is safe enough to use, but feel free to use in a <strong>VM</strong> or in a test enviroment</p>
+      <h2>features</h2>
+      <p><strong>POSIX-Compliant Core:</strong> The fundamental process management, I/O redirection, and signal handling are built on POSIX standards for reliability and portability.</p>
+      <p><strong>Advanced Command Execution:</strong> Supports pipelines <code>|</code>, logical AND <code>&&</code>, logical OR <code>||</code> and running apps in the background <code>&</code>(buggy)</p>
+      <p><strong>I/O Redirection:</strong> Handles input<code>&lt;</code> and output <code>&gt;</code>(buggy) and redirecting to a text file <code>&gt;&gt;</code></p>
+      <p><strong>Built-in Commands:</strong> Includes essential commands like <code>cd</code>, <code>exit</code>, <code>history</code>, <code>help</code>, <code>jobs</code>,<code>fg</code>, and <code>bg</code>(sometimes buggy)</p>
+      <p><strong>Job Control:</strong>(bugged): manage em with <code>jobs</code> make em foreground <code>fg</code> and move em to background with <code>bg</code></p>
+      <p><strong>Configuration:</strong> Supports a customizable user experience through a startup script <code>~/.ashrc</code> and a config file <code>~/.config/ash.conf</code></p>
+      <p><strong>prompt:</strong> Displays the current working directory and a customizable icon based on your Linux distribution.</p>
+      <br>
+      <img src="https://github.com/user-attachments/assets/a34fc61d-536f-488a-be9c-f7cd4cc4e6b6" alt="A screenshot of the ash-shell prompt">
+      <br>
+      prompt
+      <br>
+      <img src="https://github.com/user-attachments/assets/550df21f-a69f-4809-b01e-cb2156e4a921" alt="A screenshot of the ash-shell help command">
+      <br>
+      help command
+      <br>
+      <p><strong>Alias Support:</strong> Define custom aliases in <code>~/.ashrc</code> to simplify complex or frequently used commands.</p>
+      <pre><code>alias &lt;alias_name&gt;='&lt;command&gt;'
+</code></pre>
+      <p><strong>Command History:</strong> Utilizes <code>readline</code> for a familiar interactive history and line editing experience, with history saved to <code>~/.ashhistory</code></p>
+      <p><strong>Variable Support:</strong> Assign and expand shell variables.</p>
+      <h2>how to script (so bugged)</h2>
+      <p>You can write standard shell scripts and execute them with <code>ash</code>. The scripting syntax is highly compatible with other POSIX-compliant shells(kinda). warning⚠️: run the script inside the shell not outside of it like do <code>./script</code> insted <code> ash script</code> cuss it will freak out</p>
+      <pre><code>#!/bin/ash
+# A simple example script for the ash shell.
+
+# 1. Variable Assignment
+# Sets the name of the log file we'll be working with.
+LOG_FILE="script_output.log"
+echo "Using log file: $LOG_FILE"
+
+# 2. Command Execution and Output Redirection (&gt;)
+# Creates a new file and writes the first line to it.
+echo "Starting script at $(date)" &gt; "$LOG_FILE"
+
+# 3. Appending to a file (&gt;&gt;)
+# Adds a second line without overwriting the first one.
+echo "---" &gt;&gt; "$LOG_FILE"
+echo "This is a second line of text." &gt;&gt; "$LOG_FILE"
+
+# 4. Pipelines (|)
+# Lists files and pipes the output to grep to check for the log file.
+echo
+echo "Verifying file creation with a pipeline:"
+ls -l | grep "$LOG_FILE"
+
+# 5. Logical AND (&amp;&amp;)
+# This command runs only if the previous grep command was successful.
+grep "$LOG_FILE" "$LOG_FILE" &amp;&amp; echo "File check successful!"
+
+# 6. Basic command execution
+# Displays the final contents of the log file.
+echo
+echo "Final contents of the log file:"
+cat "$LOG_FILE"
+
+# 7. Clean up
+# Removes the created file.
+rm "$LOG_FILE"
+echo
+echo "Script finished. File '$LOG_FILE' has been removed."
+</code></pre>
+      <h2>using <code>~/.ashrc</code></h2>
+      <p>The <code>~/.ashrc</code> file is executed every time the shell starts up. This is the ideal place to define aliases and set up your environment.</p>
+      <pre><code># Set aliases for common commands
+alias ll='ls -alF'
+alias h='history'
+alias gcl='git clone'
+
+# Add custom paths to the PATH environment variable
+export PATH+=:/path/to/my/bin
+</code></pre>
+      <p>Modifying <code>~/.config/ash.conf</code></p>
+      <pre><code># ash-shell configuration file
+#
+# first_time: Whether this is the first time running the shell.
+#   - This is automatically set to true after the first run.
+#
+# hide_icon: Set to true to hide the Linux distro icon from the prompt.
+#   - To hide the icon, change this to `hide_icon=true`.
+
+first_time=true
+hide_icon=false
+</code></pre>
+
+      <h2>contribute</h2>
+      <p>fell free to <strong>contribute</strong> to this project in github</p>
+    </div>
 
     <h2>Install Options</h2>
     <h3>Option 1 — pacman</h3>
     <p>install <a href="/pacman-repo/">aserdev-repo</a> and install with pacman</p>
     <div class="cmd-row">
       <div class="code" id="scriptCmd">bash <(curl -fsSL https://raw.githubusercontent.com/aserdevyt/aserdev-repo/refs/heads/main/install.sh) && sudo pacman -Sy ash-shell</div>
-          <button class="copy" onclick="copyText('scriptCmd', this)">Copy</button>
-      </div>
-      <h3>Option 2 — cmake</h3>
-      <p>install cmake and compile in "C"</p>
-      <div class="cmd-row">
-        <div class="code" id="cmakeCmd">git clone https://github.com/aserdevyt/ash-shell.git && cd ash-shell && mkdir build && cd build && cmake .. && make && sudo make install</div>
-        <button class="copy" onclick="copyText('cmakeCmd', this)">Copy</button>
-      </div>
-
-      <h2>Screenshots / Logos</h2>
-      <div class="grid">
-        <div class="os"><img src="/other-projects/images/ash-shell/screenshot-1.png" alt="Screenshot-1">
-          <div>Screenshot</div>
-        </div>
-        <div class="os"><img src="/other-projects/images/ash-shell/screenshot-2.png" alt="Screenshot-2">
-          <div>Screenshot</div>
-        </div>
-        <div class="os"><img src="/other-projects/images/ash-shell/screenshot-3.png" alt="Screenshot-3">
-          <div>Screenshot</div>
-        </div>
-      </div>
-
-      <footer
-        style="margin-top:28px; padding-top:18px; border-top:1px solid rgba(255,255,255,0.04); display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap">
-        <div style="color:#cbd5e1">&copy; 2025 Aserdev</div>
-        <div class="footer-buttons" style="display:flex; gap:12px;">
-          <a class="footer-button" href="/LICENSE" target="_blank">License</a>
-          <a class="footer-button" href="https://github.com/aserdevyt/aserdevyt.github.io" target="_blank">Source
-            Code</a>
-          <a class="footer-button" href="/about.html">About</a>
-        </div>
-      </footer>
+      <button class="copy" onclick="copyText('scriptCmd', this)">Copy</button>
+    </div>
+    <h3>Option 2 — cmake</h3>
+    <p>install cmake and compile in "C"</p>
+    <div class="cmd-row">
+      <div class="code" id="cmakeCmd">git clone https://github.com/aserdevyt/ash-shell.git && cd ash-shell && mkdir build && cd build && cmake .. && make && sudo make install</div>
+      <button class="copy" onclick="copyText('cmakeCmd', this)">Copy</button>
     </div>
 
-    <script>
-      function copyText(id, btn) {
-        const el = document.getElementById(id);
-        const t = el ? el.textContent : '';
-        if (!t) return;
-        navigator.clipboard.writeText(t).then(() => {
-          const original = btn.innerText;
-          btn.innerText = 'Copied';
-          setTimeout(() => btn.innerText = original, 1500);
-        }).catch(() => { prompt('Copy this:', t); });
-      }
-    </script>
+    <h2>Screenshots / Logos</h2>
+    <div class="grid">
+      <div class="os"><img src="/other-projects/images/ash-shell/screenshot-1.png" alt="Screenshot-1">
+        <div>Screenshot</div>
+      </div>
+      <div class="os"><img src="/other-projects/images/ash-shell/screenshot-2.png" alt="Screenshot-2">
+        <div>Screenshot</div>
+      </div>
+      <div class="os"><img src="/other-projects/images/ash-shell/screenshot-3.png" alt="Screenshot-3">
+        <div>Screenshot</div>
+      </div>
+    </div>
+
+    <footer
+      style="margin-top:28px; padding-top:18px; border-top:1px solid rgba(255,255,255,0.04); display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap">
+      <div style="color:#cbd5e1">&copy; 2025 Aserdev</div>
+      <div class="footer-buttons" style="display:flex; gap:12px;">
+        <a class="footer-button" href="/LICENSE" target="_blank">License</a>
+        <a class="footer-button" href="https://github.com/aserdevyt/aserdevyt.github.io" target="_blank">Source
+          Code</a>
+        <a class="footer-button" href="/about.html">About</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function copyText(id, btn) {
+      const el = document.getElementById(id);
+      const t = el ? el.textContent : '';
+      if (!t) return;
+      navigator.clipboard.writeText(t).then(() => {
+        const original = btn.innerText;
+        btn.innerText = 'Copied';
+        setTimeout(() => btn.innerText = original, 1500);
+      }).catch(() => {
+        prompt('Copy this:', t);
+      });
+    }
+  </script>
 </body>
 
 </html>
