@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  	<link rel="icon" href="/images/logo.jpeg" sizes="32x32">
-	<link rel="shortcut icon" href="/images/logo.jpeg">
+    <link rel="icon" href="/images/logo.jpeg" sizes="32x32">
+  <link rel="shortcut icon" href="/images/logo.jpeg">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>brokefetch — Details</title>
@@ -20,6 +20,25 @@
     .copy:active { transform:translateY(1px) }
     .badges { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px }
     .badges img { vertical-align: middle; }
+
+    /* New styles for documentation */
+    .markdown-content pre {
+        background-color: #0b1220;
+        color: #dbeafe;
+        padding: 12px;
+        border-radius: 8px;
+        font-family: monospace;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        overflow: auto;
+    }
+    .markdown-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+      margin: 1em auto;
+    }
   </style>
 </head>
 <body>
@@ -29,34 +48,133 @@
     <p>Made by <a href="https://github.com/Szerwigi1410" target="_blank">Szerwigi1410</a>. 
        <a href="https://github.com/Szerwigi1410/brokefetch" target="_blank">Source code</a></p>
 
-    <!-- GitHub Badges -->
     <div class="badges">
-      <a href="https://github.com/Szerwigi1410/brokefetch" target="_blank">
-        <img src="https://img.shields.io/github/stars/Szerwigi1410/brokefetch?style=for-the-badge" alt="GitHub stars">
-      </a>
-      <a href="https://github.com/Szerwigi1410/brokefetch/forks" target="_blank">
-        <img src="https://img.shields.io/github/forks/Szerwigi1410/brokefetch?style=for-the-badge" alt="GitHub forks">
-      </a>
-      <a href="https://github.com/Szerwigi1410/brokefetch/issues" target="_blank">
-        <img src="https://img.shields.io/github/issues/Szerwigi1410/brokefetch?style=for-the-badge" alt="Open issues">
-      </a>
-      <!-- GitHub Top Language Badge -->
-<a href="https://github.com/Szerwigi1410/brokefetch" target="_blank">
-  <img src="https://img.shields.io/github/languages/top/Szerwigi1410/brokefetch" alt="GitHub top language">
-</a>
-
-<!-- Static Made With Badge -->
-<img src="https://img.shields.io/badge/made_with-vscode%2C_nano%2C_Xcode%2C_helix-blue" alt="Made with VSCode, nano, Xcode, helix">
+        <img src="https://img.shields.io/aur/license/brokefetch-git" alt="AUR License">
+        <img src="https://img.shields.io/github/languages/top/Szerwigi1410/brokefetch" alt="GitHub top language">
+        <img src="https://img.shields.io/badge/made_with-vscode%2C_nano%2C_Xcode%2C_helix-blue" alt="Made with VSCode, nano, Xcode, helix">
+        <img src="https://repology.org/badge/version-for-repo/aur/brokefetch.svg" alt="AUR package">
+        <img src="https://repology.org/badge/version-for-repo/aur/brokefetch-mod.svg" alt="AUR package">
+        <img src="https://img.shields.io/badge/-Linux-grey?logo=linux" alt="Linux">
+        <a href="https://github.com/Szerwigi1410/brokefetch" target="_blank">
+          <img src="https://img.shields.io/github/stars/Szerwigi1410/brokefetch?style=for-the-badge" alt="GitHub stars">
+        </a>
+        <a href="https://github.com/Szerwigi1410/brokefetch/forks" target="_blank">
+          <img src="https://img.shields.io/github/forks/Szerwigi1410/brokefetch?style=for-the-badge" alt="GitHub forks">
+        </a>
+        <a href="https://github.com/Szerwigi1410/brokefetch/issues" target="_blank">
+          <img src="https://img.shields.io/github/issues/Szerwigi1410/brokefetch?style=for-the-badge" alt="Open issues">
+        </a>
+        <img src="https://repology.org/badge/vertical-allrepos/brokefetch.svg" alt="Packaging status">
+        <img src="https://img.shields.io/aur/last-modified/brokefetch-git" alt="AUR Last Modified">
     </div>
 
-    
-    <h4>the only fetch tool that doesn't pretend that everything is okay</h4>
-    <p>inspired by <a href="https://github.com/dylanaraps/neofetch">Neofetch</a> but with</p>
-    <ul>
-      <li>Sadness</li>
-      <li>Regret</li>
-      <li>A CRT monitor</li>
-    </ul>
+    <div class="markdown-content">
+        <p>A broken <code>neofetch</code> clone for those of us who have no job, no GPU, no money, and no hope.</p>
+        <img src="https://raw.githubusercontent.com/Szerwigi1410/brokefetch/main/screenshots/brokefetch-logo_att4.png" alt="screenshot">
+        <img src="https://raw.githubusercontent.com/Szerwigi1410/brokefetch/main/screenshots/forthegif/gif_for_readme.gif" alt="Brokefetch_logos">
+        <p>Version 1.0 screenshot</p>
+        <img src="https://raw.githubusercontent.com/Szerwigi1410/brokefetch/main/screenshots/screenshot.png" alt="screenshot">
+
+        <h2>What is this?</h2>
+        <p><code>brokefetch</code> is the only system info tool that doesn't pretend your life is okay.</p>
+        <p>Inspired by <code>neofetch</code>, but with:</p>
+        <ul>
+            <li>Sadness</li>
+            <li>Regret</li>
+            <li>A CRT monitor</li>
+        </ul>
+
+        <h2>Installation</h2>
+        <pre><code>git clone https://github.com/Szerwigi1410/brokefetch
+cd brokefetch
+chmod +x brokefetch.sh
+./brokefetch.sh
+</code></pre>
+        <h3>using install.sh</h3>
+        <pre><code>git clone https://github.com/Szerwigi1410/brokefetch
+cd brokefetch
+chmod +x install.sh
+./install.sh
+</code></pre>
+        <h3>or use the installer "OS-wide"(experemental)</h3>
+        <pre><code>curl -sSL https://raw.githubusercontent.com/Szerwigi1410/brokefetch/refs/heads/main/install.sh &gt; install.sh ; chmod +x install.sh ; bash -c "./install.sh" ; rm -f install.sh
+</code></pre>
+        <h3>AUR (yes it's back)</h3>
+        <pre><code>yay -S brokefetch-git
+</code></pre>
+        <h3>~AUR mod~ not any more 😭</h3>
+        <pre><code>yay -S brokefetch-mod
+</code></pre>
+        <h3>pacman</h3>
+        <p>install aserdev's repo</p>
+        <pre><code>bash &lt;(curl -fsSL https://raw.githubusercontent.com/aserdevyt/aserdev-repo/refs/heads/main/install.sh)
+</code></pre>
+        <p>install brokefetch</p>
+        <pre><code>sudo pacman -Sy brokefetch
+</code></pre>
+        <h3>Homebrew</h3>
+        <pre><code>brew tap T1mohtml/brokefetch
+brew install brokefetch
+</code></pre>
+        <h3>Nix Flake</h3>
+        <p><code>flake.nix</code></p>
+        <pre><code>{
+&nbsp; ...
+&nbsp; inputs = {
+&nbsp; &nbsp; # rest of the inputs
+
+&nbsp; &nbsp; brokefetch.url = "github:Szerwigi1410/brokefetch";&nbsp; &nbsp;&nbsp;
+&nbsp; };
+
+&nbsp; outputs =
+&nbsp; &nbsp; {
+&nbsp; &nbsp; &nbsp; # other outputs
+&nbsp; &nbsp; &nbsp; ...
+&nbsp; &nbsp; }@inputs:
+&nbsp; &nbsp; {
+&nbsp; &nbsp; &nbsp; # implement modules here
+&nbsp; &nbsp; }
+}
+</code></pre>
+        <p><code>configuration.nix</code></p>
+        <pre><code>{
+&nbsp; # rest of inputs (eg: pkgs, config, lib)
+&nbsp; inputs,
+&nbsp; ...
+}
+
+{
+&nbsp; # your configuration
+
+&nbsp; environment.systemPackages = with pkgs; [
+&nbsp; &nbsp; # rest of the packages
+&nbsp; &nbsp; inputs.brokefetch.packages.x86_64-linux.brokefetch # or replace brokefetch package with brokefetch-beta
+&nbsp; ];
+
+&nbsp; # rest of configuration
+}
+</code></pre>
+        <hr>
+        <h2>Important note!</h2>
+        <ul>
+            <li><code>brokefetch.sh</code> - Stable, "just works"</li>
+            <li><code>brokefetch_beta.sh</code> - Might contain bugs, has the newest features</li>
+            <li><code>brokefetch_EDGE_legacy.sh</code> - just a backup of the old edge version (currently not present)</li>
+            <li><code>brokefetch_mod.sh</code> - a version of EDGE that loads the logos from ~/.config/brokefetch/logos (mod stands for <strong>mod</strong>ular). Currently supports 485 ascii logos!</li>
+        </ul>
+        <p>(brokefetch_EDGE got renamed to brokefetch_beta)</p>
+        <hr>
+        <h2>Troubleshooting</h2>
+        <p>If you have any issues with brokefetch, try to remove the config and run brokefetch again.</p>
+        <hr>
+        <p>💖 If you enjoy brokefetch, please ⭐ it here and vote on the <a href="https://aur.archlinux.org/packages/brokefetch-git">AUR package</a> to support its survival!</p>
+        <p>~Sadly we lost and some cock sucke- uhh I meant AUR trusted user has removed the package from AUR.~</p>
+        <p>yay <code>brokefetch is back on the aur 🥳</code></p>
+        <p>give it a try</p>
+        <pre><code>yay -S brokefetch-git
+</code></pre>
+    </div>
+
     <h2>Install Options</h2>
     <h3>Option 1 — pacman</h3>
     <p>use pacman to install:</p>
