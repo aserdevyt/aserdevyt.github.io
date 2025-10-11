@@ -95,6 +95,39 @@
 			margin-bottom: 2em;
 			color: #cbd5e1;
 		}
+		/* Styles for merged markdown content */
+		.md-section h2 {
+			font-size: 1.1rem;
+			color: #f8fafc;
+			margin-bottom: 0.6em;
+		}
+		.md-section p {
+			color: #cbd5e1;
+			line-height: 1.5;
+		}
+		.gallery {
+			display: flex;
+			gap: 12px;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-bottom: 1em;
+		}
+		.gallery img {
+			width: 220px;
+			height: 124px;
+			object-fit: cover;
+			border-radius: 8px;
+			box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+		}
+		.features-list {
+			columns: 2;
+			column-gap: 24px;
+			color: #e0e7ef;
+			margin-top: 0.6em;
+		}
+		.features-list li {
+			margin-bottom: 6px;
+		}
 		.images {
 			display: flex;
 			gap: 24px;
@@ -167,8 +200,61 @@
 		<h1>Aserdev-OS</h1>
 		<div class="desc">
 			Aserdev-OS is a minimal, fast, and customizable arch-based distribution.<br>
-			Designed for people like me who like a fast and minimal system powered by <a href="https://archlinux.org/">Arch Linux</a></a>.
-		</div>
+			Designed for people like me who like a fast and minimal system powered by <a href="https://archlinux.org/">Arch Linux</a>.</div>
+
+		<!-- Merged markdown content -->
+		<section class="md-section">
+			<h2>⚠️ work in progress — don't use if you are not sure ⚠️</h2>
+			<p>
+				This <code>os</code> is inspired by <a href="https://omarchy.org/" target="_blank">omarchy</a> but it isn't dev focused — it's focused for people who just want a cool Hyprland setup that isn't fancy or complicated. (aka: <a href="https://github.com/aserdevyy" target="_blank">me</a>)
+			</p>
+
+			<h3>Images</h3>
+			<div class="gallery">
+				<!-- External image links from markdown -->
+				<img src="https://github.com/user-attachments/assets/75d6eb1c-9b6a-475c-a7f3-988ffd361aad" alt="screenshot-1">
+				<img src="https://github.com/user-attachments/assets/5f7c56c7-3163-4284-af01-91b893bba6dd" alt="screenshot-2">
+				<img src="https://github.com/user-attachments/assets/2281e827-9dbf-4e2e-a790-855b3cf7eadd" alt="screenshot-3">
+				<img src="https://github.com/user-attachments/assets/2708d385-3a4e-4572-b40a-dcfe2ac98080" alt="screenshot-4">
+				<img src="https://github.com/user-attachments/assets/8bb79fec-d2ee-4f17-a605-4504d245bb74" alt="screenshot-5">
+			</div>
+
+			<h3>Installation</h3>
+			<p>Script (recommended)</p>
+			<p>Make a fresh install of <a href="https://archlinux.org/">Arch Linux</a> and a minimal setup with multilib and testing enabled. Create a normal user with sudo and make sure pipewire is installed. After reboot into your minimal Arch install run:</p>
+			<div class="code-area">
+				<code id="install-cmd-full">sudo pacman -Sy curl
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/aserdevyt/aserdev-os/main/install.sh)"</code>
+				<button class="copy-btn" onclick="copyCode('install-cmd-full')">Copy</button>
+			</div>
+
+			<p>ISO: coming soon — I need help creating an installer/ISO build.</p>
+
+			<h3>Issues</h3>
+			<p>If something happens report it <a href="https://github.com/aserdevyt/aserdev-os/issues" target="_blank">here</a>.</p>
+
+			<h3>Features</h3>
+			<ul class="features-list">
+				<li>rofi menu</li>
+				<li>waybar</li>
+				<li>microsoft-edge-stable</li>
+				<li>comes with <a href="https://github.com/aserdevyt/aserdev-repo" target="_blank">aserdev-repo</a></li>
+				<li>thunar</li>
+				<li>kitty</li>
+				<li>wlogout</li>
+				<li>swaync</li>
+				<li>waypaper</li>
+				<li>pluma</li>
+				<li>discord</li>
+				<li>rofi-emoji</li>
+				<li>grimblast</li>
+				<li>btop</li>
+				<li>fastfetch</li>
+				<li><a href="https://github.com/Szerwigi1410/brokefetch" target="_blank">brokefetch</a></li>
+				<li>and more</li>
+			</ul>
+		</section>
 		<!-- Aserdev-OS GitHub Badges -->
 <div class="badges">
   <a href="https://github.com/aserdevyt/aserdev-os" target="_blank">
@@ -185,27 +271,8 @@
     <img src="https://img.shields.io/github/languages/top/aserdevyt/aserdev-os?style=for-the-badge" alt="Top Language">
   </a>
 </div>
-		<div class="images">
-			<div class="img-card">
-				<img src="screenshot1.png" alt="Screenshot 1">
-				<span>brokefetch</span>
-			</div>
-			<div class="img-card">
-				<img src="screenshot2.png" alt="Screenshot 2">
-				<span>microsoft-edge</span>
-			</div>
-			<!-- Add more images as needed -->
-		</div>
-		<div class="desc">
-			<b>Install Aserdev-OS with one command, WARNING please review it because it is in an early stage of development:</b>
-		</div>
-		<div class="code-area">
-			<code id="install-cmd">sudo pacman -Sy curl && sh -c "$(curl -fsSL https://raw.githubusercontent.com/aserdevyt/aserdev-os/main/install.sh)"</code>
-			<button class="copy-btn" onclick="copyCode('install-cmd')">Copy</button>
-		</div>
-		<div class="desc">
-			<small><a href="https://github.com/aserdevyt/aserdev-os/blob/main/install.sh" target="_blank">Make sure to review the install script before running it.</a></small>
-		</div>
+
+		
 	</div>
 	<footer>
 		&copy; 2025 Aserdev OS
