@@ -1,306 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<style>
-	.theme-toggle {
-		position: fixed;
-		top: 18px;
-		right: 18px;
-		z-index: 100;
-		background: #38bdf8;
-		color: #334155;
-		border: none;
-		border-radius: 8px;
-		padding: 8px 18px;
-		font-weight: 700;
-		cursor: pointer;
-		box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-		transition: background 0.2s, color 0.2s;
-	}
-	.theme-toggle:hover {
-		background: #0ea5e9;
-		color: #fff;
-	}
-		body.light {
-			background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-			color: #222;
-		}
-		body.light .container {
-			background: #fff;
-			color: #222;
-		}
-		body.light .desc,
-		body.light .img-card,
-		body.light .code-area,
-		body.light h1,
-		body.light .copy-btn,
-		body.light footer {
-			color: #222 !important;
-		}
-		body.light .img-card {
-			background: #e0e7ef;
-			color: #222;
-		}
-		body.light .code-area {
-			background: #e0e7ef;
-			color: #222;
-		}
-		body.light .copy-btn {
-			background: #0ea5e9;
-			color: #fff;
-		}
-		body.light .copy-btn:hover {
-			background: #38bdf8;
-			color: #222;
-		}
-		body.light h1 {
-			color: #0ea5e9;
-		}
-		body.light footer {
-			color: #64748b;
-		}
-</style>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Aserdev OS Distro</title>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="../style.css">
-	<link rel="icon" href="/images/logo.jpeg" sizes="32x32">
-	<link rel="shortcut icon" href="/images/logo.jpeg">
-	<style>
-		body {
-			font-family: 'Montserrat', sans-serif;
-			background: linear-gradient(135deg, #334155 0%, #38bdf8 100%);
-			color: #fff;
-			margin: 0;
-			min-height: 100vh;
-		}
-		.container {
-			max-width: 800px;
-			margin: 60px auto;
-			background: rgba(51,65,85,0.92);
-			border-radius: 18px;
-			box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-			padding: 40px 32px;
-		}
-		h1 {
-			font-size: 2.3rem;
-			font-weight: 700;
-			margin-bottom: 0.5em;
-			letter-spacing: 2px;
-			color: #38bdf8;
-		}
-		.desc {
-			font-size: 1.1rem;
-			margin-bottom: 2em;
-			color: #cbd5e1;
-		}
-		/* Styles for merged markdown content */
-		.md-section h2 {
-			font-size: 1.1rem;
-			color: #f8fafc;
-			margin-bottom: 0.6em;
-		}
-		.md-section p {
-			color: #cbd5e1;
-			line-height: 1.5;
-		}
-		.gallery {
-			display: flex;
-			gap: 12px;
-			flex-wrap: wrap;
-			justify-content: center;
-			margin-bottom: 1em;
-		}
-		.gallery img {
-			width: 220px;
-			height: 124px;
-			object-fit: cover;
-			border-radius: 8px;
-			box-shadow: 0 4px 14px rgba(0,0,0,0.25);
-		}
-		.features-list {
-			columns: 2;
-			column-gap: 24px;
-			color: #e0e7ef;
-			margin-top: 0.6em;
-		}
-		.features-list li {
-			margin-bottom: 6px;
-		}
-		.images {
-			display: flex;
-			gap: 24px;
-			flex-wrap: wrap;
-			justify-content: center;
-			margin-bottom: 2em;
-		}
-		.img-card {
-			background: #1e293b;
-			border-radius: 10px;
-			box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-			padding: 10px;
-			width: 220px;
-			text-align: center;
-		}
-		.img-card img {
-			width: 200px;
-			height: 120px;
-			object-fit: cover;
-			border-radius: 8px;
-			margin-bottom: 8px;
-			background: #64748b;
-		}
-		.img-card span {
-			color: #e0e7ef;
-			font-size: 0.95em;
-		}
-		.code-area {
-			background: #1e293b;
-			border-radius: 10px;
-			padding: 18px 16px;
-			margin-bottom: 1.5em;
-			position: relative;
-			font-size: 1.05em;
-			color: #e0e7ef;
-			box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-		}
-		.copy-btn {
-			position: absolute;
-			top: 12px;
-			right: 12px;
-			background: #38bdf8;
-			color: #334155;
-			border: none;
-			border-radius: 6px;
-			padding: 6px 14px;
-			font-weight: 700;
-			cursor: pointer;
-			transition: background 0.2s;
-		}
-		.copy-btn:hover {
-			background: #0ea5e9;
-			color: #fff;
-		}
-		footer {
-			text-align: center;
-			margin-top: 40px;
-			color: #cbd5e1;
-			font-size: 0.95em;
-		}
-	</style>
-</head>
-<body>
-	<button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
-		<div class="container">
-			<div style="text-align:center; margin-bottom:24px;">
-				<a href="/index.html" style="display:inline-block; padding:10px 24px; background:#38bdf8; color:#334155; border-radius:8px; font-weight:700; text-decoration:none; font-size:1em; margin-right:12px; transition:background 0.2s;">Home</a>
-				<a href="https://github.com/aserdevyt/" target="_blank" style="display:inline-block; padding:10px 24px; background:#38bdf8; color:#334155; border-radius:8px; font-weight:700; text-decoration:none; font-size:1em; transition:background 0.2s;">GitHub</a>
-			</div>
-		<h1>Aserdev-OS</h1>
-		<div class="desc">
-			Aserdev-OS is a minimal, fast, and customizable arch-based distribution.<br>
-			Designed for people like me who like a fast and minimal system powered by <a href="https://archlinux.org/">Arch Linux</a>.</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aserdev OS Distro</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/aserdev-os/style.css" />
+    <link rel="icon" href="/images/logo.jpeg" sizes="32x32" />
+    <link rel="shortcut icon" href="/images/logo.jpeg" />
+  </head>
+  <body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 24px">
+        <a
+          href="/index.html"
+          style="
+            display: inline-block;
+            padding: 10px 24px;
+            background: #38bdf8;
+            color: #334155;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1em;
+            margin-right: 12px;
+            transition: background 0.2s;
+          "
+          >Home</a
+        >
+        <a
+          href="https://github.com/aserdevyt/"
+          target="_blank"
+          style="
+            display: inline-block;
+            padding: 10px 24px;
+            background: #38bdf8;
+            color: #334155;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1em;
+            transition: background 0.2s;
+          "
+          >GitHub</a
+        >
+      </div>
+      <h1>Aserdev-OS</h1>
+      <div class="desc">
+        Aserdev-OS is a minimal, fast, and customizable arch-based
+        distribution.<br />
+        Designed for people like me who like a fast and minimal system powered
+        by <a href="https://archlinux.org/">Arch Linux</a>.
+      </div>
 
-		<!-- Merged markdown content -->
-		<section class="md-section">
-			<h2>⚠️ work in progress — don't use if you are not sure ⚠️</h2>
-			<p>
-				This <code>os</code> is inspired by <a href="https://omarchy.org/" target="_blank">omarchy</a> but it isn't dev focused — it's focused for people who just want a cool Hyprland setup that isn't fancy or complicated. (aka: <a href="https://github.com/aserdevyy" target="_blank">me</a>)
-			</p>
+      <section class="md-section">
+        <h2>⚠️ work in progress — don't use if you are not sure ⚠️</h2>
+        <p>
+          This <strong>os</strong> is inspired by
+          <a href="https://omarchy.org/" target="_blank">omarchy</a> but it
+          isn't dev focused — it's focused for people who just want a cool
+          Hyprland setup that isn't fancy or complicated. (aka:
+          <a href="https://github.com/aserdevyy" target="_blank">me</a>)
+        </p>
 
-			<h3>Images</h3>
-			<div class="gallery">
-				<!-- External image links from markdown -->
-				<img src="https://github.com/user-attachments/assets/75d6eb1c-9b6a-475c-a7f3-988ffd361aad" alt="screenshot-1">
-				<img src="https://github.com/user-attachments/assets/5f7c56c7-3163-4284-af01-91b893bba6dd" alt="screenshot-2">
-				<img src="https://github.com/user-attachments/assets/2281e827-9dbf-4e2e-a790-855b3cf7eadd" alt="screenshot-3">
-				<img src="https://github.com/user-attachments/assets/2708d385-3a4e-4572-b40a-dcfe2ac98080" alt="screenshot-4">
-				<img src="https://github.com/user-attachments/assets/8bb79fec-d2ee-4f17-a605-4504d245bb74" alt="screenshot-5">
-			</div>
+        <h3>Images</h3>
+        <div class="gallery">
+          <img
+            src="https://github.com/user-attachments/assets/75d6eb1c-9b6a-475c-a7f3-988ffd361aad"
+            alt="screenshot-1"
+          />
+          <img
+            src="https://github.com/user-attachments/assets/5f7c56c7-3163-4284-af01-91b893bba6dd"
+            alt="screenshot-2"
+          />
+          <img
+            src="https://github.com/user-attachments/assets/2281e827-9dbf-4e2e-a790-855b3cf7eadd"
+            alt="screenshot-3"
+          />
+          <img
+            src="https://github.com/user-attachments/assets/2708d385-3a4e-4572-b40a-dcfe2ac98080"
+            alt="screenshot-4"
+          />
+          <img
+            src="https://github.com/user-attachments/assets/8bb79fec-d2ee-4f17-a605-4504d245bb74"
+            alt="screenshot-5"
+          />
+        </div>
 
-			<h3>Installation</h3>
-			<p>Script (recommended)</p>
-			<p>Make a fresh install of <a href="https://archlinux.org/">Arch Linux</a> and a minimal setup with multilib and testing enabled. Create a normal user with sudo and make sure pipewire is installed. After reboot into your minimal Arch install run:</p>
-			<div class="code-area">
-				<code id="install-cmd-full">sudo pacman -Sy curl
+        <h3>Installation</h3>
+        <p>Script (recommended)</p>
+        <p>
+          Make a fresh install of
+          <a href="https://archlinux.org/">Arch Linux</a> and a minimal setup
+          with multilib and testing enabled. Create a normal user with sudo and
+          make sure pipewire is installed. After reboot into your minimal Arch
+          install run:
+        </p>
+        <div class="code-area">
+          <code id="install-cmd-full"
+            >sudo pacman -Sy curl sh -c "$(curl -fsSL
+            https://raw.githubusercontent.com/aserdevyt/aserdev-os/main/install.sh)"</code
+          >
+          <button class="copy-btn" onclick="copyCode('install-cmd-full')">
+            Copy
+          </button>
+        </div>
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/aserdevyt/aserdev-os/main/install.sh)"</code>
-				<button class="copy-btn" onclick="copyCode('install-cmd-full')">Copy</button>
-			</div>
+        <p>ISO: coming soon — I need help creating an installer/ISO build.</p>
 
-			<p>ISO: coming soon — I need help creating an installer/ISO build.</p>
+        <h3>Issues</h3>
+        <p>
+          If something happens report it
+          <a
+            href="https://github.com/aserdevyt/aserdev-os/issues"
+            target="_blank"
+            >here</a
+          >.
+        </p>
 
-			<h3>Issues</h3>
-			<p>If something happens report it <a href="https://github.com/aserdevyt/aserdev-os/issues" target="_blank">here</a>.</p>
+        <h3>Features</h3>
+        <ul class="features-list">
+          <li>rofi menu</li>
+          <li>waybar</li>
+          <li>microsoft-edge-stable</li>
+          <li>
+            comes with
+            <a href="https://github.com/aserdevyt/aserdev-repo" target="_blank"
+              >aserdev-repo</a
+            >
+          </li>
+          <li>thunar</li>
+          <li>kitty</li>
+          <li>wlogout</li>
+          <li>swaync</li>
+          <li>waypaper</li>
+          <li>pluma</li>
+          <li>discord</li>
+          <li>rofi-emoji</li>
+          <li>grimblast</li>
+          <li>btop</li>
+          <li>fastfetch</li>
+          <li>
+            <a href="https://github.com/Szerwigi1410/brokefetch" target="_blank"
+              >brokefetch</a
+            >
+          </li>
+          <li>and more</li>
+        </ul>
+      </section>
+      <!-- Aserdev-OS GitHub Badges -->
+      <div class="badges">
+        <a href="https://github.com/aserdevyt/aserdev-os" target="_blank">
+          <img
+            src="https://img.shields.io/github/stars/aserdevyt/aserdev-os?style=for-the-badge"
+            alt="GitHub stars"
+          />
+        </a>
+        <a href="https://github.com/aserdevyt/aserdev-os/forks" target="_blank">
+          <img
+            src="https://img.shields.io/github/forks/aserdevyt/aserdev-os?style=for-the-badge"
+            alt="GitHub forks"
+          />
+        </a>
+        <a
+          href="https://github.com/aserdevyt/aserdev-os/issues"
+          target="_blank"
+        >
+          <img
+            src="https://img.shields.io/github/issues/aserdevyt/aserdev-os?style=for-the-badge"
+            alt="Open issues"
+          />
+        </a>
 
-			<h3>Features</h3>
-			<ul class="features-list">
-				<li>rofi menu</li>
-				<li>waybar</li>
-				<li>microsoft-edge-stable</li>
-				<li>comes with <a href="https://github.com/aserdevyt/aserdev-repo" target="_blank">aserdev-repo</a></li>
-				<li>thunar</li>
-				<li>kitty</li>
-				<li>wlogout</li>
-				<li>swaync</li>
-				<li>waypaper</li>
-				<li>pluma</li>
-				<li>discord</li>
-				<li>rofi-emoji</li>
-				<li>grimblast</li>
-				<li>btop</li>
-				<li>fastfetch</li>
-				<li><a href="https://github.com/Szerwigi1410/brokefetch" target="_blank">brokefetch</a></li>
-				<li>and more</li>
-			</ul>
-		</section>
-		<!-- Aserdev-OS GitHub Badges -->
-<div class="badges">
-  <a href="https://github.com/aserdevyt/aserdev-os" target="_blank">
-    <img src="https://img.shields.io/github/stars/aserdevyt/aserdev-os?style=for-the-badge" alt="GitHub stars">
-  </a>
-  <a href="https://github.com/aserdevyt/aserdev-os/forks" target="_blank">
-    <img src="https://img.shields.io/github/forks/aserdevyt/aserdev-os?style=for-the-badge" alt="GitHub forks">
-  </a>
-  <a href="https://github.com/aserdevyt/aserdev-os/issues" target="_blank">
-    <img src="https://img.shields.io/github/issues/aserdevyt/aserdev-os?style=for-the-badge" alt="Open issues">
-  </a>
-
-  <a href="https://github.com/aserdevyt/aserdev-os" target="_blank">
-    <img src="https://img.shields.io/github/languages/top/aserdevyt/aserdev-os?style=for-the-badge" alt="Top Language">
-  </a>
-</div>
-
-		
-	</div>
-	<footer>
-		&copy; 2025 Aserdev OS
-		<div class="footer-buttons">
-			<a class="footer-button" href="/LICENSE" target="_blank">License</a>
-			<a class="footer-button" href="https://github.com/aserdevyt/aserdevyt.github.io/tree/main" target="_blank">Source Code</a>
-			<a class="footer-button" href="/about.html">About</a>
-		</div>
-	</footer>
-	<script>
-	function toggleTheme() {
-		document.body.classList.toggle('light');
-		localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
-	}
-		function setThemeFromPreference() {
-			const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-			if(localStorage.getItem('theme')) {
-				document.body.classList.toggle('light', localStorage.getItem('theme') === 'light');
-			} else {
-				document.body.classList.toggle('light', prefersLight);
-			}
-		}
-		window.onload = setThemeFromPreference;
-		window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', setThemeFromPreference);
-		function copyCode(id) {
-			const code = document.getElementById(id).innerText;
-			navigator.clipboard.writeText(code);
-		}
-	</script>
-</body>
+        <a href="https://github.com/aserdevyt/aserdev-os" target="_blank">
+          <img
+            src="https://img.shields.io/github/languages/top/aserdevyt/aserdev-os?style=for-the-badge"
+            alt="Top Language"
+          />
+        </a>
+      </div>
+    </div>
+    <footer>
+      &copy; 2025 Aserdev OS
+      <div class="footer-buttons">
+        <a class="footer-button" href="/LICENSE" target="_blank">License</a>
+        <a
+          class="footer-button"
+          href="https://github.com/aserdevyt/aserdevyt.github.io/tree/main"
+          target="_blank"
+          >Source Code</a
+        >
+        <a class="footer-button" href="/about.html">About</a>
+      </div>
+    </footer>
+    <script>
+      function toggleTheme() {
+        document.body.classList.toggle("light");
+        localStorage.setItem(
+          "theme",
+          document.body.classList.contains("light") ? "light" : "dark"
+        );
+      }
+      function setThemeFromPreference() {
+        const prefersLight = window.matchMedia(
+          "(prefers-color-scheme: light)"
+        ).matches;
+        if (localStorage.getItem("theme")) {
+          document.body.classList.toggle(
+            "light",
+            localStorage.getItem("theme") === "light"
+          );
+        } else {
+          document.body.classList.toggle("light", prefersLight);
+        }
+      }
+      window.onload = setThemeFromPreference;
+      window
+        .matchMedia("(prefers-color-scheme: light)")
+        .addEventListener("change", setThemeFromPreference);
+      function copyCode(id) {
+        const code = document.getElementById(id).innerText;
+        navigator.clipboard.writeText(code);
+      }
+    </script>
+  </body>
 </html>
