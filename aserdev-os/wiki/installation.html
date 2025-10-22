@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Installation — Aserdev-OS Wiki</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/aserdev-os/wiki/style.css">
+    <link rel="icon" href="/images/logo.jpeg" sizes="32x32">
+  </head>
+  <body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+    <div class="container">
+      <div class="top-links">
+        <a class="top-link top-link--primary" href="index.html">Back</a>
+        <a class="top-link top-link--secondary" href="/aserdev-os/">Aserdev-OS</a>
+      </div>
+      <h1>Installation</h1>
+      <p class="desc">Instructions for installing Aserdev-OS.</p>
+
+      <section class="md-section">
+        <h2>Recommended Script</h2>
+        <p>Run the installer script on a minimal Arch installation:</p>
+        <div class="code-area">
+          <code id="install-cmd">sudo pacman -Sy curl sh -c "$(curl -fsSL https://raw.githubusercontent.com/aserdevyt/aserdev-os/main/install.sh)"</code>
+          <button class="copy-btn" onclick="copyCode('install-cmd')">Copy</button>
+        </div>
+
+        <h2>ISO Installation</h2>
+        <p>sadly there no isos available for installation at this time.</p>
+        <p>if you can help please reach out in  <a href="https://github.com/aserdevyt/aserdev-os">github</a></p>
+      </section>
+    </div>
+
+    <footer>
+      &copy; 2025 Aserdev OS
+    </footer>
+    <script src="/aserdev-os/wiki/script.js"></script>
+  </body>
+</html>

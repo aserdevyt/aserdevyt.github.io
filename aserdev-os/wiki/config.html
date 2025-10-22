@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Configuration — Aserdev-OS Wiki</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/aserdev-os/wiki/style.css">
+    <link rel="icon" href="/images/logo.jpeg" sizes="32x32">
+  </head>
+  <body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+    <div class="container">
+      <div class="top-links">
+        <a class="top-link top-link--primary" href="index.html">Back</a>
+        <a class="top-link top-link--secondary" href="/aserdev-os/">Aserdev-OS</a>
+      </div>
+      <h1>Configuration</h1>
+      <p class="desc">Document configuration files, dotfiles, and recommended settings here.</p>
+
+      <section class="md-section">
+        <h2>Hyprland</h2>
+        <p>your hyprland stuff will be in <code>~/.config/hypr/</code></p>
+        <p>here is your <strong>main</strong> hyprland config</p>
+        <div class="code-area">
+          <code id="hypr-example">nvim ~/.config/hypr/hyprland.conf</code>
+          <button class="copy-btn" onclick="copyCode('hypr-example')">Copy</button>
+        </div>
+        <p>here are your <strong>keybinds</strong> hyprland configs</p>
+        <div class="code-area">
+          <code id="hypr-keybinds-example">nvim ~/.config/hypr/binds.conf</code>
+          <button class="copy-btn" onclick="copyCode('hypr-keybinds-example')">Copy</button>
+        </div>
+
+        <h2>Rofi</h2>
+        <p>Rofi config files are located in <code>~/.config/rofi/</code></p>
+        <p>here is your <strong>main</strong> rofi config</p>
+        <div class="code-area">
+          <code id="rofi-example">nvim ~/.config/rofi/config.rasi</code>
+          <button class="copy-btn" onclick="copyCode('rofi-example')">Copy</button>
+        </div>
+
+        <h2>Waybar</h2>
+        <p>Waybar config files are located in <code>~/.config/waybar/</code></p>
+        <p>here is your <strong>main</strong> waybar config</p>
+        <div class="code-area">
+          <code id="waybar-example">nvim ~/.config/waybar/config</code>
+          <button class="copy-btn" onclick="copyCode('waybar-example')">Copy</button>
+        </div>
+        <p>here is your <strong>style</strong> waybar config</p>
+        <div class="code-area">
+          <code id="waybar-style-example">nvim ~/.config/waybar/style.css</code>
+          <button class="copy-btn" onclick="copyCode('waybar-style-example')">Copy</button>
+        </div>
+        <p>here is your <strong>color</strong> waybar config</p>
+        <div class="code-area">
+          <code id="waybar-bg-example">nvim ~/.config/waybar/colors.css</code>
+          <button class="copy-btn" onclick="copyCode('waybar-bg-example')">Copy</button>
+        </div>
+        <h2>pacman</h2>
+        <p>here is your <strong>pacman</strong> config</p>
+        <div class="code-area">
+          <code id="pacman-example">sudo nvim /etc/pacman.conf</code>
+          <button class="copy-btn" onclick="copyCode('pacman-example')">Copy</button>
+        </div>
+        <h2>wallpapers</h2>
+        <p>just use <strong>waypaper</strong></p>
+        <div class="code-area">
+          <code id="wallpapers-example">waypaper</code>
+          <button class="copy-btn" onclick="copyCode('wallpapers-example')">Copy</button>
+        </div>
+      </section>
+    </div>
+    <footer>
+      &copy; 2025 Aserdev OS
+    </footer>
+    <script src="/aserdev-os/wiki/script.js"></script>
+  </body>
+</html>

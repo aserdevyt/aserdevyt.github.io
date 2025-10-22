@@ -1,0 +1,232 @@
+/* Wiki styles - ported from /aserdev-os/style.css for visual parity */
+.theme-toggle {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 100;
+  background: #38bdf8;
+  color: #334155;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: background 0.2s, color 0.2s;
+}
+.theme-toggle:hover {
+  background: #0ea5e9;
+  color: #fff;
+}
+body.light {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  color: #222;
+}
+body.light .container {
+  background: #fff;
+  color: #222;
+}
+body.light .desc,
+body.light .img-card,
+body.light .code-area,
+body.light h1,
+body.light .copy-btn,
+body.light footer {
+  color: #222 !important;
+}
+body.light .img-card {
+  background: #e0e7ef;
+  color: #222;
+}
+body.light .code-area {
+  background: #e0e7ef;
+  color: #222;
+}
+body.light .copy-btn {
+  background: #0ea5e9;
+  color: #fff;
+}
+body.light .copy-btn:hover {
+  background: #38bdf8;
+  color: #222;
+}
+body.light h1 {
+  color: #0ea5e9;
+}
+body.light footer {
+  color: #64748b;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(135deg, #334155 0%, #38bdf8 100%);
+  color: #fff;
+  margin: 0;
+  min-height: 100vh;
+}
+.container {
+  max-width: 800px;
+  margin: 60px auto;
+  background: rgba(51, 65, 85, 0.92);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  padding: 40px 32px;
+}
+h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  letter-spacing: 2px;
+  color: #38bdf8;
+}
+.desc {
+  font-size: 1.1rem;
+  margin-bottom: 2em;
+  color: #cbd5e1;
+}
+.md-section h2 {
+  font-size: 1.1rem;
+  color: #f8fafc;
+  margin-bottom: 0.6em;
+}
+.md-section p {
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+.gallery {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+.gallery img {
+  width: 220px;
+  height: 124px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+.features-list {
+  columns: 2;
+  column-gap: 24px;
+  color: #e0e7ef;
+  margin-top: 0.6em;
+}
+.features-list li {
+  margin-bottom: 6px;
+}
+.images {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+.img-card {
+  background: #1e293b;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  padding: 10px;
+  width: 220px;
+  text-align: center;
+}
+.img-card img {
+  width: 200px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background: #64748b;
+}
+.img-card span {
+  color: #e0e7ef;
+  font-size: 0.95em;
+}
+.code-area {
+  background: #1e293b;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 1.5em;
+  position: relative;
+  font-size: 1.05em;
+  color: #e0e7ef;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+.copy-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #38bdf8;
+  color: #334155;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.copy-btn:hover {
+  background: #0ea5e9;
+  color: #fff;
+}
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #cbd5e1;
+  font-size: 0.95em;
+}
+.footer-buttons {
+  margin-top: 8px;
+}
+.footer-button {
+  display: inline-block;
+  padding: 8px 12px;
+  margin: 6px 8px;
+  background: transparent;
+  color: #cbd5e1;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  font-weight: 700;
+  transition: background 0.2s, color 0.2s;
+}
+.footer-button:hover {
+  background: #38bdf8;
+  color: #334155;
+  border-color: transparent;
+}
+body.light .footer-button {
+  color: #334155;
+  border-color: rgba(0, 0, 0, 0.06);
+}
+body.light .footer-button:hover {
+  background: #0ea5e9;
+  color: #fff;
+}
+a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 700;
+}
+a:hover {
+  text-decoration: underline;
+  color: #0ea5e9;
+}
+body.light a {
+  color: #0ea5e9;
+}
+.md-section a {
+  color: #38bdf8;
+}
+.desc a {
+  color: #38bdf8;
+}
+
+/* Top links (back/site) used at the top of wiki pages */
+.top-links{display:flex;gap:8px;justify-content:center;margin-bottom:18px}
+.top-link{display:inline-block;padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:700;align-items:center}
+.top-link--primary{background:#38bdf8;color:#13303f}
+.top-link--secondary{background:transparent;color:#cbd5e1;border:1px solid rgba(255,255,255,0.06)}
+body.light .top-link--secondary{color:#334155;border-color:rgba(0,0,0,0.06)}
+
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Packages — Aserdev-OS Wiki</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/aserdev-os/wiki/style.css">
+    <link rel="icon" href="/images/logo.jpeg" sizes="32x32">
+  </head>
+  <body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+    <div class="container">
+      <div class="top-links">
+        <a class="top-link top-link--primary" href="index.html">Back</a>
+        <a class="top-link top-link--secondary" href="/aserdev-os/">Aserdev-OS</a>
+      </div>
+      <h1>Packages</h1>
+      <p class="desc">List of packages included in Aserdev-OS .</p>
+
+      <section class="md-section">
+        <h2>Included Packages</h2>
+        <ul class="features-list">
+          <li>hyprland</li>
+          <li>rofi</li>
+          <li>waybar</li>
+          <li>kitty</li>
+          <li>thunar</li>
+          <li>discord</li>
+          <li>and more</li>
+        </ul>
+
+        <h3>this is how to use pacman</h3>
+        <p>To install a package, use the following command:</p>
+        <div class="code-area">
+          <code id="pacman-install-example">install package_name</code>
+          <button class="copy-btn" onclick="copyCode('pacman-install-example')">Copy</button>
+        </div>
+        <p>or use the normal way</p>
+        <div class="code-area">
+          <code id="pacman-normal-example">sudo pacman -S package_name</code>
+          <button class="copy-btn" onclick="copyCode('pacman-normal-example')">Copy</button>
+        </div>
+        <p>To remove a package, use the following command:</p>
+        <div class="code-area">
+          <code id="pacman-remove-example">sudo pacman -R package_name</code>
+          <button class="copy-btn" onclick="copyCode('pacman-remove-example')">Copy</button>
+        </div>
+        <p>to update your os, use the following command:</p>
+        <div class="code-area">
+          <code id="pacman-update-example">update</code>
+          <button class="copy-btn" onclick="copyCode('pacman-update-example')">Copy</button>
+        </div>
+        <p>or use the normal way</p>
+        <div class="code-area">
+          <code id="pacman-normal-update-example">sudo pacman -Syu</code>
+          <button class="copy-btn" onclick="copyCode('pacman-normal-update-example')">Copy</button>
+        </div>
+        <h2>aur</h2>
+        <p>to use aur, you can use yay.</p>
+        <div class="code-area">
+          <code id="yay-install-example">yay -S package_name</code>
+          <button class="copy-btn" onclick="copyCode('yay-install-example')">Copy</button>
+        </div>
+        <p>To remove a package, use the following command:</p>
+        <div class="code-area">
+          <code id="yay-remove-example">yay -R package_name</code>
+          <button class="copy-btn" onclick="copyCode('yay-remove-example')">Copy</button>
+        </div>
+        <p>to update your aur packages, use the following command:</p>
+        <div class="code-area">
+          <code id="yay-update-example">yay -Syu</code>
+          <button class="copy-btn" onclick="copyCode('yay-update-example')">Copy</button>
+        </div>
+        <h4>manual use of aur</h4>
+        <p>you can also use git and makepkg to install aur packages manually.</p>
+        <p>this method is useful if you need to customize the package before installation.</p>
+        
+        <div class="code-area">
+          <code id="aur-manual-example">git clone https://aur.archlinux.org/package_name.git && cd package_name && makepkg -si</code>
+          <button class="copy-btn" onclick="copyCode('aur-manual-example')">Copy</button>
+        </div>
+        <p>if you don't like yay, you can install paru</p>
+        <div class="code-area">
+          <code id="paru-install-example">git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si</code>
+          <button class="copy-btn" onclick="copyCode('paru-install-example')">Copy</button>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      &copy; 2025 Aserdev OS
+    </footer>
+    <script src="/aserdev-os/wiki/script.js"></script>
+  </body>
+</html>
