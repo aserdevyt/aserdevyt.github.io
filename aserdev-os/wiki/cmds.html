@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>command-line — Aserdev-OS Wiki</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://aserdevyt.github.io/aserdev-os/wiki/cmds.html">
+  <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="/aserdev-os/wiki/style.css">
+    <link rel="icon" href="/images/logo.jpeg" sizes="32x32">
+  </head>
+  <body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+    <div class="container">
+      <div class="top-links">
+        <a class="top-link top-link--primary" href="index.html">Back</a>
+        <a class="top-link top-link--secondary" href="/aserdev-os/">Aserdev-OS</a>
+      </div>
+      <h1>command-line</h1>
+      <h2>ZSH</h2>
+      <p>aserdev-os comes with a shell called <a href="https://en.wikipedia.org/wiki/Z_shell">zsh</a> also called <code>Z shell</code> </p>
+      <p>it is stored in <code>/bin/zsh</code> or <code>/usr/bin/zsh</code> depending on the system configuration.</p>
+      <h3>to start zsh open your terminal(kitty)</h3>
+          <figure style="margin:0;">
+        <img
+            src="/images/zsh.png"
+            sizes="(max-width:600px) 100vw, (max-width:1200px) 60vw, 400px"
+            alt="empty zsh"
+            style="max-width:100%;height:auto;display:block;margin:0 auto;"
+            loading="lazy"
+        />
+    </figure>
+        <p>you can start typing commands right away.</p>
+        <h3>some basic commands:</h3>
+        <ul>
+            <li><code style="color: green; font-size: 20px;">ls</code> - list files and directories in the current directory.</li>
+            <li><code style="color: green; font-size: 20px;">cd [directory]</code> - change the current directory to the specified directory.</li>
+            <li><code style="color: green; font-size: 20px;">pwd</code> - print the current working directory.</li>
+            <li><code style="color: green; font-size: 20px;">mkdir [directory]</code> - create a new directory with the specified name.</li>
+            <li><code style="color: green; font-size: 20px;">rm [file]</code> - remove the specified file.</li>
+            <li><code style="color: green; font-size: 20px;">cp [source] [destination]</code> - copy a file from source to destination.</li>
+            <li><code style="color: green; font-size: 20px;">mv [source] [destination]</code> - move or rename a file from source to destination.</li>
+            <li><code style="color: green; font-size: 20px;">echo [text]</code> - display the specified text in the terminal.</li>
+            <li><code style="color: green; font-size: 20px;">exit</code> - exit the zsh shell.</li>
+        </ul>
+        <p>these are just a few basic commands to get you started with zsh in aserdev-os. there are many more commands and features available in zsh that you can explore as you become more familiar with the shell.</p>
+        <h3>aserdev-os exclusive commands</h3>
+        <ul>
+            <li><code style="color: blue; font-size: 20px;">update</code> - updates aserdev-os and all installed packages.</li>
+            <li><code style="color: blue; font-size: 20px;">ins [package]</code> - installs a new package from the aserdev-os repository.</li>
+            <li><code style="color: blue; font-size: 20px;">userctl</code> - create/delete users.</li>
+        </ul>
+        <h4>to customize your shell read <a href="https://github.com/ohmyzsh/ohmyzsh/wiki">oh-my-zsh wiki</a> and <a href="https://github.com/romkatv/powerlevel10k">p10k github page</a>  
+        </h4>
+    </div>
+
+    <footer>
+      &copy; 2025 Aserdev OS
+    </footer>
+    <script src="/aserdev-os/wiki/script.js"></script>
+  </body>
+</html>
