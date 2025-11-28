@@ -29,12 +29,113 @@
         </div>
 
         <h2>ISO Installation</h2>
-        <p>sadly there no isos available for installation at this time.</p>
-        <p>if you can help please reach out in  <a href="https://github.com/aserdevyt/aserdev-os">github</a></p>
-      </section>
-    </div>
+        <h3>precautions</h3>
+        <p>download the iso from <a href="https://github.com/aserdevyt/aserdev-os/releases">releases</a></p>
+        <p>flash it to a USB drive using a tool like <a href="https://rufus.ie/">Rufus</a> or <a href="https://www.balena.io/etcher/">balenaEtcher</a>.</p>
+        <p>boot to it using your boot menu</p>
+        <h3>Installation Steps</h3>
+        <ol>
+          <li>Connect to wifi using <code>iwctl</code>.</li>
+          <li>run <code>aserinstall</code> or <code>aserinstall -v</code></li>
 
+        </ol>
+        <h4>aserinstall</h4>
+        <p>1:disk selection - choose the disk where you want to install Aserdev-OS.</p>
+         <figure style="margin:0;">
+        <img
+            src="/images/installSteps/1.png"
+            sizes="(max-width:600px) 100vw, (max-width:1200px) 60vw, 400px"
+            alt="disk selection"
+            style="max-width:100%;height:auto;display:block;margin:0 auto;"
+            loading="lazy"
+        />
+    </figure>
+        <p>2:boot mode: choose <a href="https://en.wikipedia.org/wiki/UEFI">GPT(UEFI)</a> or <a href="https://en.wikipedia.org/wiki/Master_boot_record">MBR(BIOS)</a>.</p>
+         <figure style="margin:0;">
+        <img
+            src="/images/installSteps/2.png"
+            sizes="(max-width:600px) 100vw, (max-width:1200px) 60vw, 400px"
+            alt="partitioning"
+            style="max-width:100%;height:auto;display:block;margin:0 auto;"
+            loading="lazy"
+        />
+
+        <p>3:partitioning - choose automatic(partitioning done for you) or manual(partitioning done by you).</p>
+         <figure style="margin:0;">
+        <img
+            src="/images/installSteps/3.png"
+            sizes="(max-width:600px) 100vw, (max-width:1200px) 60vw, 400px"
+            alt="boot mode"
+            style="max-width:100%;height:auto;display:block;margin:0 auto;"
+            loading="lazy"
+        />
+
+    </figure>
+        <p>4:root password - pick a password for yoour root user.</p>
+         <figure style="margin:0;">
+        <img
+            src="/images/installSteps/4.png"
+            sizes="(max-width:600px) 100vw, (max-width:1200px) 60vw, 400px"
+            alt="username and password"
+            style="max-width:100%;height:auto;display:block;margin:0 auto;"
+            loading="lazy"
+        />
+    </figure>
+        <p>5:username  - create a new user by providing a username.</p>
+         <figure style="margin:0;">
+        <img
+            src="/images/installSteps/5.png"
+            sizes="(max-width:600px) 100vw, (max-width:1200px) 60vw, 400px"
+            alt="installation complete"
+            style="max-width:100%;height:auto;display:block;margin:0 auto;"
+            loading="lazy"
+        />
+    </figure>
+    <p>6:password - select a password for the new user.</p>
+               <figure style="margin:0;">
+        <img
+            src="/images/installSteps/6.png"
+            sizes="(max-width:600px) 100vw, (max-width:1200px) 60vw, 400px"
+            alt="installation complete"
+            style="max-width:100%;height:auto;display:block;margin:0 auto;"
+            loading="lazy"
+        />
+    </figure>
+    <p>7:sudo - configure sudo privileges for the new user.</p>
+                   <figure style="margin:0;">
+        <img
+            src="/images/installSteps/7.png"
+            sizes="(max-width:600px) 100vw, (max-width:1200px) 60vw, 400px"
+            alt="installation complete"
+            style="max-width:100%;height:auto;display:block;margin:0 auto;"
+            loading="lazy"
+        />
+    </figure>
+    <p>8:hostname - set the hostname for your system.</p>
+             <figure style="margin:0;">
+        <img
+            src="/images/installSteps/8.png"
+            sizes="(max-width:600px) 100vw, (max-width:1200px) 60vw, 400px"
+            alt="installation complete"
+            style="max-width:100%;height:auto;display:block;margin:0 auto;"
+            loading="lazy"
+        />
+    </figure>
+    <p>9:confirmation - review your choices and confirm to start the installation.</p>
+         <figure style="margin:0;">
+        <img
+            src="/images/installSteps/9.png"
+            sizes="(max-width:600px) 100vw, (max-width:1200px) 60vw, 400px"
+            alt="installation complete"
+            style="max-width:100%;height:auto;display:block;margin:0 auto;"
+            loading="lazy"
+        />
+    </figure>
+    <h5>now wait a long time(i mean a long time) it took me 5 hours to install for some reason</h5>
+          </section>  
+    </div>
     <footer>
+
       &copy; 2025 Aserdev OS
     </footer>
     <script src="/aserdev-os/wiki/script.js"></script>
